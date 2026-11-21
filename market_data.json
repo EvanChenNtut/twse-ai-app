@@ -1,38 +1,111 @@
 {
-  "updatedAt": "2026/11/21 21:35",
+  "updatedAt": "2026/11/21 21:47",
   "todayDate": "2026-11-21",
   "targetDate": "2026-11-23",
-  "foreignNetBillion": -118.4,
+  "foreignNetBillion": -95.11,
   "usTechPct": {
-    "IXIC": 0.65,
-    "SOX": 1.12,
-    "TSM": 1.45
+    "IXIC": -5.28,
+    "SOX": -10.73,
+    "TSM": -9.48
   },
   "news": [
     {
-      "id": "news-1",
-      "source": "美股科技追蹤",
-      "category": "國際",
+      "id": "news-0",
+      "source": "Yahoo股市",
+      "category": "即時新聞",
       "time": "今日更新",
-      "title": "費城半導體指數反彈 1.12%、台積電 ADR 上漲 1.45%，帶動電子權值止穩",
-      "sentiment": "bull",
-      "impact": 6
+      "title": "台股爆發失速列車！系統性殺盤、台積電險跌破2千…杜金龍曝「合理價」 再喊加碼2檔甜甜價",
+      "link": "https://news.google.com/rss/articles/CBMipgNBVV95cUxQdTZYZ3BNSHpaR29LakxzakwwWlhLUE1aZ3E2QTBXMXdQRFJpSC1DOE9POVlaUVBPUlY3eXlfSE15MmczcmpLeHE1MjFkdmxzTTYzdkY0cjd4Y1AzYnhZX0pKX3FqVmcxemVuc2ZiQUxBanVHZ2ZpalBlVWZHaWY2d29RWEt5Y3BjUzcycDEySmNMVWY5RGRuMEVDTkEtX2JRQ2M2MmRHNmZuYTFjSTV5Y0Zlc1h5TTZrMklkR0p2QVZtaTUwcUg3U1B2UHRhbGZpQnBKampKVk9NSFR1aTNRQ29xLVNMR0JDMGp3RFY2NGl3Wmw2cVVvOU9Wc2hoQzh4dWdPeERMYzgxYm8wYkh4ZklZY2Fmb1hzWjJFV2VGNzZZd0Q3ckV5UFYtdTloM0tPSWdaZ0h6aEt3d0hJbUU1SzI4QUlURjcxcmxNYzFRLWxMUENfSUw2alcxclVTWEJ3LUhpNkZNeEhkVFhnQjZfckYtX1dUUU91MnpZMG5IQ3Y2Q05jX1RMNDNrcGF3dWpHLXhvQ0k0SmdzZ3VHZk56VEtzVWVMQQ?oc=5",
+      "sentiment": "neutral",
+      "impact": 0
+    },
+    {
+      "id": "news-1",
+      "source": "自由財經",
+      "category": "即時新聞",
+      "time": "今日更新",
+      "title": "散戶搶購台積電零股衝241億 杜金龍曝合理價、分批買進區",
+      "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE93OGlzZjRaWG1DUWNFZ1hWSFVCaDZFS0VaM3VLUGlRYmtqODl4NGxqdU8tV2ZvWFhWa3JHNlR5M0Zzak4zQjRCcG93aUxXR2pxUDRQSXVGOGVtMWdYeG5R0gFkQVVfeXFMT2FMdC0xY0FiYmRpNF9fSGtTMmdkTVA4c0pvd2cwU2wyMmloM3F6STVMTVBPd3FZQ2cwY01UcU05NDRnYnlOVzVWY1FOTmZiUjM3cU11VV9ZV2tRazVsVjBRMnhMaw?oc=5",
+      "sentiment": "neutral",
+      "impact": 0
     },
     {
       "id": "news-2",
-      "source": "盤後籌碼速報",
-      "category": "籌碼",
+      "source": "永豐金證券",
+      "category": "即時新聞",
       "time": "今日更新",
-      "title": "台股守穩 38,100 關卡，外資賣超幅度大幅縮小至百億附近",
+      "title": "台股4萬點保衛戰！杜金龍揭逃命波結束？曝光潛力族群逢低布局加碼好時機！《雅筑會客室》EP70｜杜金龍、張雅筑",
+      "link": "https://news.google.com/rss/articles/CBMijgVBVV95cUxNSXUxcTZQTW9USHI1Q09iRXUzZDE3eUxpc1FhLW91VTFTMC1fZ3h3c29sQzhxLW1PakNLTTE5elVEN1lwYm81SDVORzJBODBzYVFJak9sdy1FMG1hOTFNUVJTRzVuclRaei1SZnhvX2FTVGNBc045QS1oTGVWNDMwQnh4V19tV3NXazlhZHNMT3hMRXFCLTMyN3pxMVNsQlZWQlJGVmVFcEhFaGZPUUNSbUk2RWdIa2RFWlhtNTA4ZFlYMjJwMjRuTFFUTEZSZWIwOGdRZS1BUWNaNVd2eFo3ZVFXbTVJckpXZDlvV2MxVkZPbDV0ZTFDZWxjdW9kSlhQR19rY0xyaTNpNjhwdmhQT0RrSVFUWk9RcWVUQ1NSOV9iQkNxTnNSQm9Wd1hoVjdzOE81YUc4NURGYThZS0xmeWJ0a2ttbDV5NVNnYzJxdTdxUWlIV2Npd2U2dmFQMmxYVkFER2xNcThsNERtMXVDN055c0lmQXdsRXQwdzIzOUpUVGtRTDJNQm1kRFk3djJ3bWZLM2R4cC1YNDk4U2c0eGJUczViR2gzbTd1YldvZzRpM2tSMHl4d2ZYaFBoSUo5SWpXM21HaG5NbzJEcUNzbVJMYmF5X1BvQVR3eVBTYjVYNnI1N19GckJscmdRbVpxVnU0V25GRUo4NXZoenROUG81ZlVFMUZWRlhSNkhXbE5BRjBjVlAxVzJSa25ZcVl1SWhNSDlxY2E3YXptZ2F5YkFTTi1PdDUyTjBoMXctSUpMam5qQm5STV9KYVFTbWJSVTBPOWExV1FmZkJFUEk0WWZQWnp0a1BBa1hzZVljTnFIOXNaN0lxbGNVNjllVHdKcWNLN215S282YnNTU1E?oc=5",
       "sentiment": "neutral",
-      "impact": 1
+      "impact": 0
     },
     {
       "id": "news-3",
-      "source": "ETF 籌碼觀察",
-      "category": "籌碼",
+      "source": "工商時報",
+      "category": "即時新聞",
       "time": "今日更新",
-      "title": "大盤震盪加劇，0050正2 與 0050反1 成交量雙雙放大",
+      "title": "台積電跌到2千能買？杜金龍曝「合理價」 再點名1檔記憶體、1檔CCL遭錯殺- 證券",
+      "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9WVlR5LU5PVnBYcXJDQ0RhQVhnV3lWdFQyNXlMWk95SFQxdDFtS0xDSUQ1eVhGZTlSQVlQMEJaTmxSRDEtTG5GU1VjUTg2V0hDOFZDNmJDcm96ZTY5aWNB?oc=5",
+      "sentiment": "neutral",
+      "impact": 0
+    },
+    {
+      "id": "news-4",
+      "source": "鉅亨網",
+      "category": "即時新聞",
+      "time": "今日更新",
+      "title": "台積電周線重挫15.8%！台股創36年最慘單周紀錄、美收緊AI晶片出口管制添壓",
+      "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE1CdGhhMmtpREk3aDJGQ25PVklyeDNyajBISkVQODBob3FnWFhXclVva0dackJaWE5xY2psdmpDOEJTNS1oN01mdXZySm1NOTA?oc=5",
+      "sentiment": "bear",
+      "impact": -4
+    },
+    {
+      "id": "news-5",
+      "source": "鉅亨買基金",
+      "category": "即時新聞",
+      "time": "今日更新",
+      "title": "第一金觀點｜台股AI紅利續上修，第一金投信台股TISA級別基金 選擇更多元！",
+      "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNNFQ2MS1PeWJBWlRfNWloQmlYVUtfOWFrXzA0S0tDYlBWMzBEb0xYU1hkUTFNUFJxZnJ1NVNiMVZNYjdkQjlYUUdieXlvTGlfWktZWWlSaHlCQU12Q09tY3gtQjE1Z3ZVRkhPQXJ3M25ya3A5RTJnTi1rNGpJdjRBbTRB?oc=5",
+      "sentiment": "neutral",
+      "impact": 0
+    },
+    {
+      "id": "news-6",
+      "source": "Yahoo股市",
+      "category": "即時新聞",
+      "time": "今日更新",
+      "title": "黃仁勳去職推倒台股？ 經濟部：AI趨勢不因「個別公司」影響",
+      "link": "https://news.google.com/rss/articles/CBMi6wJBVV95cUxNRm9iUFI1YjJiYWxpSmE2RkpRUTZ1cEhrNmtGOTVUQ0p1cVlBYkNXVEs5bF9DU0thaFg3T2J5akZ1WjR3SnJhb3hWMWxJdjY0cXFKX29rMkNiejFSa05oaHl1bEc0VmZKWG9ibDNEbmpnQ0gwcDdZVEZ1bVZFLS15S2JndUtRanJic08zTnBTUEdNOVJsQ2RkWWxFdTdGQjBxY0N4SXI5N0NVa1VMTm9fN0VRUGpBNTVCRFl5TzcyODh2MlRCU0tWc2xBSEstUEkwT3ZCa3EyMTFOdUtTLVpoQTAwVzNoeG0tUmlHSjV5ZHNvcS01eHVfU09zNnJVWk9XVTliSzdGM2tNRl9QU2NEQ2xXRnpLUjFST1AzcXpDdU1zRHNFZUpMaXFYSTFZVFFUUWd0WmlJal96ZkNXUmY0bVVJYXlmeWF6b1RTYmRRMWY5QkZscG1zeU4xZzhtSzQ5Wmd1UC1rZ2U5QkE?oc=5",
+      "sentiment": "neutral",
+      "impact": 0
+    },
+    {
+      "id": "news-7",
+      "source": "Yahoo股市",
+      "category": "即時新聞",
+      "time": "今日更新",
+      "title": "台股暴跌！國安基金罕見喊話了：跨部會維護股市穩定 請投資人保持信心",
+      "link": "https://news.google.com/rss/articles/CBMixwNBVV95cUxNQ3ItcVJzYlRSa3BoT2R1NXRlczRiVFE4eU5nXzNfYkowMkhNaWFYZDhYS05jdFZCTk9FbE1WU1I2OFF6Vng0dGJab2lPU0lBRFhYQlVLTzJqVWNqUGRyaXVET2xjWDNINms5NUZHd3ZjTFoyYWZ0TlpVcGZGTmZEUmZGdVc3LW92Ukg2b3BsRmNDbGhGYTNYVC1CLU9RUWs1WWtQb2lnQ3hvS05ibzN6b2dtV2RNMVFSUlZSOV9HRHowTWdzUlRfZ3JqeXVIc3dDVW4yUVRrbllVdnF4Q2plclhPWFV1MXQ4VEtXcWh1OEFDZlhzME1jeS1hU0JGX0Z4bmFxcXdJR3phNnRMYXpnY0NubHpaczBPVjMwZEg2TVhKMnE0N3JGV0tlS21LX1BnbUxWSG8xV1lwQXBNUHlFNm1HVE1GUndsb25fZjItcVdZNUVNVjVLWGoyenNXcDNNNVhWWWdOOFhoNXYxUmlRdU54cW94aE1BVy1rYWkzNzh0c1dRUFEtVEl5TXpNRWxjUmEzWjNtQUJkS2ZNU3N5QWxhY08wY1ljN2xMLTh3aFRrQVNPbXpIWXA3V0o2WWd5Y05nMkpjYw?oc=5",
+      "sentiment": "bear",
+      "impact": -4
+    },
+    {
+      "id": "news-8",
+      "source": "Yahoo股市",
+      "category": "即時新聞",
+      "time": "今日更新",
+      "title": "台股重挫7641點！ 證交所發聲了",
+      "link": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxOTEpGZHhPTnpZQ3FaRmlVekZBUm9xSzRGU082M1NYb05RQ1BGRVdXb1pVdk5UaTc4a1hveWZqTjlYdzY5VHNnb3hkMERGWEVaeGp5dUhISVhuRi02Sl83VWx1M1h6VVhSYmNtTmlqbU5OVXZtaWhEZk9PMnpqTlVSbVRpZExaQmloc3RwbFk4R2x0bkMxLTFtQUQyTkhmQ1RJWkZYTTM0RHFRNWVDemdQSnd1WmN3bVRuRVhvSmtSTi1lcHNaT0RzZWZYZmw0aHNHUE9BQmJ3NVpJd19RMC1CbUo2Umk4Zw?oc=5",
+      "sentiment": "bear",
+      "impact": -4
+    },
+    {
+      "id": "news-9",
+      "source": "Yahoo股市",
+      "category": "即時新聞",
+      "time": "今日更新",
+      "title": "周末精選｜後黃仁勳時代台股急殺！法人定調「評價重估」非AI反轉 點名3族群接棒",
+      "link": "https://news.google.com/rss/articles/CBMijwNBVV95cUxPTFd5cXhVV0Y1Q3ZhdzA5ZmpDdy0wc2N1X19KVTFBTHFfTXRZSG83U3pVTVlKWjEyOFRIYWNpamlzbGE1T0RZZEhvU1VzLVkyWFNzZkdGYTQ3ajdMOGdPd19LbHVRTzU0OWtXbF9EUHlmakx2NlgwVXhvU0dxMzBfUk0tOUpQcTlGV2pBVzN6RlBMeHpha2NCeWdqU29qaFlYQkpDX192UHZxNlkyYkxWZ1VWNVhyNUd2UHl3NmVjMDB1LXVlR0laeHdqaDVRTDBTR3FXaHpCd0tFcjllSU4wNHVEWmw2bnFyeHVreG1kQTlBNEY4YlFkNzJYRDBXUDZscUZteE44eEhFLVpSNlFnMlgtbWFYa3E4eDNqMElGUnhlcWJsUHhSdUU0R1ZpQ2p5YjZUZ0duWjcxX1VXNmdQaDN1ZWFfZEhwS2VpTHlTNTljRGJ0SUxKcFJvSTZDQWl0dWNVRjk0dUhRVG5CM3lTWVZVWVZRQU9mVWJjNUp2RGRIUnFENHJIQTg1V2Q4U28?oc=5",
       "sentiment": "neutral",
       "impact": 0
     }
@@ -41,310 +114,6188 @@
     "TAIEX": {
       "code": "TAIEX",
       "name": "加權指數",
+      "yfSymbol": "^TWII",
       "annualVol": 0.24,
       "leverage": 1.0,
-      "price": "38,112.40",
-      "change": "-314.49",
-      "changePct": "-0.82%",
+      "price": "36,033.29",
+      "change": "-2,393.60",
+      "changePct": "-6.23%",
       "isUp": false,
-      "baseBullProb": 47,
-      "mlStatus": "ML 自動訓練完成 (60 日樣本)",
-      "learnedWeights": { "foreign": 34, "usTech": 33, "news": 18, "tech": 15 },
+      "baseBullProb": 37,
+      "mlStatus": "ML 自動訓練完成 (72 日樣本)",
+      "learnedWeights": {
+        "foreign": 15,
+        "usTech": 13,
+        "news": 51,
+        "tech": 21
+      },
       "factors": [
-        { "name": "外資與法人資金動能", "score": 32, "weight": "34%", "desc": "外資賣超幅度較昨日收斂，期貨空單小幅回補" },
-        { "name": "美股科技綜合連動 (那指/費半/TSM)", "score": 61, "weight": "33%", "desc": "那指 +0.65% / 費半 +1.12% / TSM ADR +1.45%" },
-        { "name": "網路新聞與社群情緒", "score": 45, "weight": "18%", "desc": "費半與 ADR 走強舒緩短線恐慌情緒" },
-        { "name": "技術面均線乖離率", "score": 48, "weight": "15%", "desc": "回測 38,000 點整數關卡留下影線支撐" }
+        {
+          "name": "外資與法人資金動能",
+          "score": 39,
+          "weight": "15%",
+          "desc": "外資今日賣超 95.1 億元"
+        },
+        {
+          "name": "美股科技綜合連動 (那指/費半/TSM)",
+          "score": 15,
+          "weight": "13%",
+          "desc": "那指 -5.28% / 費半 -10.73% / TSM ADR -9.48%"
+        },
+        {
+          "name": "網路新聞與社群情緒",
+          "score": 36,
+          "weight": "51%",
+          "desc": "即時彙整 Google 財經新聞與市場多空關鍵字"
+        },
+        {
+          "name": "技術面均線乖離率",
+          "score": 15,
+          "weight": "21%",
+          "desc": "收盤價距 20 日均線乖離 -15.65%"
+        }
       ],
       "history": [
-        { "date": "10/09", "pred": "漲 57%", "predPct": "+0.42%", "actual": "跌", "actualPct": "-0.55%", "hit": false },
-        { "date": "10/12", "pred": "跌 63%", "predPct": "-0.78%", "actual": "跌", "actualPct": "-0.91%", "hit": true },
-        { "date": "10/13", "pred": "漲 64%", "predPct": "+0.85%", "actual": "漲", "actualPct": "+1.12%", "hit": true },
-        { "date": "10/14", "pred": "漲 59%", "predPct": "+0.52%", "actual": "漲", "actualPct": "+0.64%", "hit": true },
-        { "date": "10/15", "pred": "跌 55%", "predPct": "-0.31%", "actual": "跌", "actualPct": "-0.48%", "hit": true },
-        { "date": "10/16", "pred": "漲 68%", "predPct": "+1.10%", "actual": "漲", "actualPct": "+1.35%", "hit": true },
-        { "date": "10/19", "pred": "跌 62%", "predPct": "-0.72%", "actual": "跌", "actualPct": "-0.88%", "hit": true },
-        { "date": "10/21", "pred": "漲 56%", "predPct": "+0.36%", "actual": "跌", "actualPct": "-0.29%", "hit": false },
-        { "date": "10/22", "pred": "漲 71%", "predPct": "+1.28%", "actual": "漲", "actualPct": "+1.54%", "hit": true },
-        { "date": "10/23", "pred": "漲 58%", "predPct": "+0.49%", "actual": "漲", "actualPct": "+0.41%", "hit": true },
-        { "date": "10/24", "pred": "跌 59%", "predPct": "-0.54%", "actual": "漲", "actualPct": "+0.33%", "hit": false },
-        { "date": "10/25", "pred": "跌 65%", "predPct": "-0.92%", "actual": "跌", "actualPct": "-1.08%", "hit": true },
-        { "date": "10/28", "pred": "漲 55%", "predPct": "+0.32%", "actual": "漲", "actualPct": "+0.47%", "hit": true },
-        { "date": "10/29", "pred": "漲 60%", "predPct": "+0.61%", "actual": "漲", "actualPct": "+0.79%", "hit": true },
-        { "date": "10/30", "pred": "跌 60%", "predPct": "-0.62%", "actual": "跌", "actualPct": "-0.74%", "hit": true },
-        { "date": "10/31", "pred": "跌 59%", "predPct": "-0.55%", "actual": "跌", "actualPct": "-0.68%", "hit": true },
-        { "date": "11/01", "pred": "跌 68%", "predPct": "-1.12%", "actual": "跌", "actualPct": "-1.26%", "hit": true },
-        { "date": "11/04", "pred": "漲 57%", "predPct": "+0.44%", "actual": "漲", "actualPct": "+0.58%", "hit": true },
-        { "date": "11/05", "pred": "跌 65%", "predPct": "-0.90%", "actual": "跌", "actualPct": "-1.15%", "hit": true },
-        { "date": "11/06", "pred": "跌 72%", "predPct": "-1.35%", "actual": "跌", "actualPct": "-1.62%", "hit": true },
-        { "date": "11/07", "pred": "漲 55%", "predPct": "+0.30%", "actual": "漲", "actualPct": "+0.49%", "hit": true },
-        { "date": "11/08", "pred": "跌 58%", "predPct": "-0.48%", "actual": "跌", "actualPct": "-0.53%", "hit": true },
-        { "date": "11/11", "pred": "跌 56%", "predPct": "-0.38%", "actual": "跌", "actualPct": "-0.42%", "hit": true },
-        { "date": "11/12", "pred": "漲 62%", "predPct": "+0.73%", "actual": "漲", "actualPct": "+0.95%", "hit": true },
-        { "date": "11/13", "pred": "漲 58%", "predPct": "+0.50%", "actual": "漲", "actualPct": "+0.61%", "hit": true },
-        { "date": "11/14", "pred": "跌 66%", "predPct": "-0.98%", "actual": "跌", "actualPct": "-1.19%", "hit": true },
-        { "date": "11/15", "pred": "跌 54%", "predPct": "-0.25%", "actual": "漲", "actualPct": "+0.38%", "hit": false },
-        { "date": "11/18", "pred": "跌 71%", "predPct": "-1.30%", "actual": "跌", "actualPct": "-1.48%", "hit": true },
-        { "date": "11/19", "pred": "跌 78%", "predPct": "-1.85%", "actual": "跌", "actualPct": "-4.40%", "hit": true },
-        { "date": "11/20", "pred": "跌 66%", "predPct": "-0.96%", "actual": "跌", "actualPct": "-0.82%", "hit": true }
+        {
+          "date": "10/09",
+          "pred": "漲 57%",
+          "predPct": "+0.42%",
+          "actual": "跌",
+          "actualPct": "-0.55%",
+          "hit": false
+        },
+        {
+          "date": "10/12",
+          "pred": "跌 63%",
+          "predPct": "-0.78%",
+          "actual": "跌",
+          "actualPct": "-0.91%",
+          "hit": true
+        },
+        {
+          "date": "10/13",
+          "pred": "漲 64%",
+          "predPct": "+0.85%",
+          "actual": "漲",
+          "actualPct": "+1.12%",
+          "hit": true
+        },
+        {
+          "date": "10/14",
+          "pred": "漲 59%",
+          "predPct": "+0.52%",
+          "actual": "漲",
+          "actualPct": "+0.64%",
+          "hit": true
+        },
+        {
+          "date": "10/15",
+          "pred": "跌 55%",
+          "predPct": "-0.31%",
+          "actual": "跌",
+          "actualPct": "-0.48%",
+          "hit": true
+        },
+        {
+          "date": "10/16",
+          "pred": "漲 68%",
+          "predPct": "+1.10%",
+          "actual": "漲",
+          "actualPct": "+1.35%",
+          "hit": true
+        },
+        {
+          "date": "10/19",
+          "pred": "跌 62%",
+          "predPct": "-0.72%",
+          "actual": "跌",
+          "actualPct": "-0.88%",
+          "hit": true
+        },
+        {
+          "date": "10/21",
+          "pred": "漲 56%",
+          "predPct": "+0.36%",
+          "actual": "跌",
+          "actualPct": "-0.29%",
+          "hit": false
+        },
+        {
+          "date": "10/22",
+          "pred": "漲 71%",
+          "predPct": "+1.28%",
+          "actual": "漲",
+          "actualPct": "+1.54%",
+          "hit": true
+        },
+        {
+          "date": "10/23",
+          "pred": "漲 58%",
+          "predPct": "+0.49%",
+          "actual": "漲",
+          "actualPct": "+0.41%",
+          "hit": true
+        },
+        {
+          "date": "10/24",
+          "pred": "跌 59%",
+          "predPct": "-0.54%",
+          "actual": "漲",
+          "actualPct": "+0.33%",
+          "hit": false
+        },
+        {
+          "date": "10/25",
+          "pred": "跌 65%",
+          "predPct": "-0.92%",
+          "actual": "跌",
+          "actualPct": "-1.08%",
+          "hit": true
+        },
+        {
+          "date": "10/28",
+          "pred": "漲 55%",
+          "predPct": "+0.32%",
+          "actual": "漲",
+          "actualPct": "+0.47%",
+          "hit": true
+        },
+        {
+          "date": "10/29",
+          "pred": "漲 60%",
+          "predPct": "+0.61%",
+          "actual": "漲",
+          "actualPct": "+0.79%",
+          "hit": true
+        },
+        {
+          "date": "10/30",
+          "pred": "跌 60%",
+          "predPct": "-0.62%",
+          "actual": "跌",
+          "actualPct": "-0.74%",
+          "hit": true
+        },
+        {
+          "date": "10/31",
+          "pred": "跌 59%",
+          "predPct": "-0.55%",
+          "actual": "跌",
+          "actualPct": "-0.68%",
+          "hit": true
+        },
+        {
+          "date": "11/01",
+          "pred": "跌 68%",
+          "predPct": "-1.12%",
+          "actual": "跌",
+          "actualPct": "-1.26%",
+          "hit": true
+        },
+        {
+          "date": "11/04",
+          "pred": "漲 57%",
+          "predPct": "+0.44%",
+          "actual": "漲",
+          "actualPct": "+0.58%",
+          "hit": true
+        },
+        {
+          "date": "11/05",
+          "pred": "跌 65%",
+          "predPct": "-0.90%",
+          "actual": "跌",
+          "actualPct": "-1.15%",
+          "hit": true
+        },
+        {
+          "date": "11/06",
+          "pred": "跌 72%",
+          "predPct": "-1.35%",
+          "actual": "跌",
+          "actualPct": "-1.62%",
+          "hit": true
+        },
+        {
+          "date": "11/07",
+          "pred": "漲 55%",
+          "predPct": "+0.30%",
+          "actual": "漲",
+          "actualPct": "+0.49%",
+          "hit": true
+        },
+        {
+          "date": "11/08",
+          "pred": "跌 58%",
+          "predPct": "-0.48%",
+          "actual": "跌",
+          "actualPct": "-0.53%",
+          "hit": true
+        },
+        {
+          "date": "11/11",
+          "pred": "跌 56%",
+          "predPct": "-0.38%",
+          "actual": "跌",
+          "actualPct": "-0.42%",
+          "hit": true
+        },
+        {
+          "date": "11/12",
+          "pred": "漲 62%",
+          "predPct": "+0.73%",
+          "actual": "漲",
+          "actualPct": "+0.95%",
+          "hit": true
+        },
+        {
+          "date": "11/13",
+          "pred": "漲 58%",
+          "predPct": "+0.50%",
+          "actual": "漲",
+          "actualPct": "+0.61%",
+          "hit": true
+        },
+        {
+          "date": "11/14",
+          "pred": "跌 66%",
+          "predPct": "-0.98%",
+          "actual": "跌",
+          "actualPct": "-1.19%",
+          "hit": true
+        },
+        {
+          "date": "11/15",
+          "pred": "跌 54%",
+          "predPct": "-0.25%",
+          "actual": "漲",
+          "actualPct": "+0.38%",
+          "hit": false
+        },
+        {
+          "date": "11/18",
+          "pred": "跌 71%",
+          "predPct": "-1.30%",
+          "actual": "跌",
+          "actualPct": "-1.48%",
+          "hit": true
+        },
+        {
+          "date": "11/19",
+          "pred": "跌 78%",
+          "predPct": "-1.85%",
+          "actual": "跌",
+          "actualPct": "-4.40%",
+          "hit": true
+        },
+        {
+          "date": "11/20",
+          "pred": "跌 66%",
+          "predPct": "-0.96%",
+          "actual": "跌",
+          "actualPct": "-0.82%",
+          "hit": true
+        }
       ]
     },
     "2330": {
       "code": "2330",
       "name": "台積電",
+      "yfSymbol": "2330.TW",
       "annualVol": 0.32,
       "leverage": 1.0,
-      "price": "2,085.00",
-      "change": "-15.00",
-      "changePct": "-0.71%",
+      "price": "2,000.00",
+      "change": "-100.00",
+      "changePct": "-4.76%",
       "isUp": false,
-      "baseBullProb": 51,
-      "mlStatus": "ML 自動訓練完成 (60 日樣本)",
-      "learnedWeights": { "foreign": 31, "usTech": 37, "news": 17, "tech": 15 },
+      "baseBullProb": 39,
+      "mlStatus": "ML 自動訓練完成 (73 日樣本)",
+      "learnedWeights": {
+        "foreign": 33,
+        "usTech": 30,
+        "news": 27,
+        "tech": 10
+      },
       "factors": [
-        { "name": "外資與法人資金動能", "score": 36, "weight": "31%", "desc": "外資賣壓明顯減輕，投信持續站在買方" },
-        { "name": "美股科技綜合連動 (那指/費半/TSM)", "score": 61, "weight": "37%", "desc": "那指 +0.65% / 費半 +1.12% / TSM ADR +1.45%" },
-        { "name": "網路新聞與社群情緒", "score": 48, "weight": "17%", "desc": "TSM ADR 領漲 1.45%，先進製程基本面強勁" },
-        { "name": "技術面均線乖離率", "score": 52, "weight": "15%", "desc": "守穩 2,080 元上方，量縮止跌訊號浮現" }
+        {
+          "name": "外資與法人資金動能",
+          "score": 39,
+          "weight": "33%",
+          "desc": "外資今日賣超 95.1 億元"
+        },
+        {
+          "name": "美股科技綜合連動 (那指/費半/TSM)",
+          "score": 15,
+          "weight": "30%",
+          "desc": "那指 -5.28% / 費半 -10.73% / TSM ADR -9.48%"
+        },
+        {
+          "name": "網路新聞與社群情緒",
+          "score": 36,
+          "weight": "27%",
+          "desc": "即時彙整 Google 財經新聞與市場多空關鍵字"
+        },
+        {
+          "name": "技術面均線乖離率",
+          "score": 15,
+          "weight": "10%",
+          "desc": "收盤價距 20 日均線乖離 -12.13%"
+        }
       ],
       "history": [
-        { "date": "10/09", "pred": "漲 62%", "predPct": "+0.95%", "actual": "漲", "actualPct": "+1.18%", "hit": true },
-        { "date": "10/12", "pred": "跌 57%", "predPct": "-0.56%", "actual": "跌", "actualPct": "-0.72%", "hit": true },
-        { "date": "10/13", "pred": "漲 69%", "predPct": "+1.52%", "actual": "漲", "actualPct": "+1.85%", "hit": true },
-        { "date": "10/14", "pred": "漲 54%", "predPct": "+0.32%", "actual": "跌", "actualPct": "-0.45%", "hit": false },
-        { "date": "10/15", "pred": "跌 61%", "predPct": "-0.88%", "actual": "跌", "actualPct": "-1.02%", "hit": true },
-        { "date": "10/16", "pred": "漲 71%", "predPct": "+1.68%", "actual": "漲", "actualPct": "+2.10%", "hit": true },
-        { "date": "10/19", "pred": "跌 64%", "predPct": "-1.12%", "actual": "跌", "actualPct": "-1.34%", "hit": true },
-        { "date": "10/21", "pred": "跌 72%", "predPct": "-1.75%", "actual": "跌", "actualPct": "-1.90%", "hit": true },
-        { "date": "10/22", "pred": "漲 63%", "predPct": "+1.04%", "actual": "漲", "actualPct": "+1.25%", "hit": true },
-        { "date": "10/23", "pred": "漲 58%", "predPct": "+0.64%", "actual": "跌", "actualPct": "-0.38%", "hit": false },
-        { "date": "10/24", "pred": "漲 61%", "predPct": "+0.89%", "actual": "漲", "actualPct": "+0.96%", "hit": true },
-        { "date": "10/25", "pred": "跌 55%", "predPct": "-0.40%", "actual": "跌", "actualPct": "-0.62%", "hit": true },
-        { "date": "10/28", "pred": "漲 74%", "predPct": "+1.92%", "actual": "漲", "actualPct": "+2.24%", "hit": true },
-        { "date": "10/29", "pred": "漲 68%", "predPct": "+1.44%", "actual": "漲", "actualPct": "+1.58%", "hit": true },
-        { "date": "10/30", "pred": "跌 67%", "predPct": "-1.36%", "actual": "跌", "actualPct": "-1.49%", "hit": true },
-        { "date": "10/31", "pred": "跌 59%", "predPct": "-0.72%", "actual": "跌", "actualPct": "-0.85%", "hit": true },
-        { "date": "11/01", "pred": "跌 58%", "predPct": "-0.65%", "actual": "跌", "actualPct": "-0.79%", "hit": true },
-        { "date": "11/04", "pred": "漲 60%", "predPct": "+0.81%", "actual": "漲", "actualPct": "+1.05%", "hit": true },
-        { "date": "11/05", "pred": "漲 59%", "predPct": "+0.71%", "actual": "跌", "actualPct": "-0.52%", "hit": false },
-        { "date": "11/06", "pred": "跌 66%", "predPct": "-1.28%", "actual": "跌", "actualPct": "-1.41%", "hit": true },
-        { "date": "11/07", "pred": "漲 56%", "predPct": "+0.48%", "actual": "漲", "actualPct": "+0.67%", "hit": true },
-        { "date": "11/08", "pred": "跌 58%", "predPct": "-0.64%", "actual": "跌", "actualPct": "-0.74%", "hit": true },
-        { "date": "11/11", "pred": "跌 64%", "predPct": "-1.10%", "actual": "跌", "actualPct": "-1.22%", "hit": true },
-        { "date": "11/12", "pred": "漲 65%", "predPct": "+1.20%", "actual": "漲", "actualPct": "+1.38%", "hit": true },
-        { "date": "11/13", "pred": "漲 60%", "predPct": "+0.80%", "actual": "漲", "actualPct": "+0.91%", "hit": true },
-        { "date": "11/14", "pred": "跌 59%", "predPct": "-0.72%", "actual": "跌", "actualPct": "-0.88%", "hit": true },
-        { "date": "11/15", "pred": "漲 52%", "predPct": "+0.18%", "actual": "漲", "actualPct": "+0.44%", "hit": true },
-        { "date": "11/18", "pred": "跌 68%", "predPct": "-1.45%", "actual": "跌", "actualPct": "-1.63%", "hit": true },
-        { "date": "11/19", "pred": "跌 72%", "predPct": "-1.80%", "actual": "跌", "actualPct": "-3.89%", "hit": true },
-        { "date": "11/20", "pred": "跌 59%", "predPct": "-0.74%", "actual": "跌", "actualPct": "-0.71%", "hit": true }
+        {
+          "date": "10/09",
+          "pred": "漲 62%",
+          "predPct": "+0.95%",
+          "actual": "漲",
+          "actualPct": "+1.18%",
+          "hit": true
+        },
+        {
+          "date": "10/12",
+          "pred": "跌 57%",
+          "predPct": "-0.56%",
+          "actual": "跌",
+          "actualPct": "-0.72%",
+          "hit": true
+        },
+        {
+          "date": "10/13",
+          "pred": "漲 69%",
+          "predPct": "+1.52%",
+          "actual": "漲",
+          "actualPct": "+1.85%",
+          "hit": true
+        },
+        {
+          "date": "10/14",
+          "pred": "漲 54%",
+          "predPct": "+0.32%",
+          "actual": "跌",
+          "actualPct": "-0.45%",
+          "hit": false
+        },
+        {
+          "date": "10/15",
+          "pred": "跌 61%",
+          "predPct": "-0.88%",
+          "actual": "跌",
+          "actualPct": "-1.02%",
+          "hit": true
+        },
+        {
+          "date": "10/16",
+          "pred": "漲 71%",
+          "predPct": "+1.68%",
+          "actual": "漲",
+          "actualPct": "+2.10%",
+          "hit": true
+        },
+        {
+          "date": "10/19",
+          "pred": "跌 64%",
+          "predPct": "-1.12%",
+          "actual": "跌",
+          "actualPct": "-1.34%",
+          "hit": true
+        },
+        {
+          "date": "10/21",
+          "pred": "跌 72%",
+          "predPct": "-1.75%",
+          "actual": "跌",
+          "actualPct": "-1.90%",
+          "hit": true
+        },
+        {
+          "date": "10/22",
+          "pred": "漲 63%",
+          "predPct": "+1.04%",
+          "actual": "漲",
+          "actualPct": "+1.25%",
+          "hit": true
+        },
+        {
+          "date": "10/23",
+          "pred": "漲 58%",
+          "predPct": "+0.64%",
+          "actual": "跌",
+          "actualPct": "-0.38%",
+          "hit": false
+        },
+        {
+          "date": "10/24",
+          "pred": "漲 61%",
+          "predPct": "+0.89%",
+          "actual": "漲",
+          "actualPct": "+0.96%",
+          "hit": true
+        },
+        {
+          "date": "10/25",
+          "pred": "跌 55%",
+          "predPct": "-0.40%",
+          "actual": "跌",
+          "actualPct": "-0.62%",
+          "hit": true
+        },
+        {
+          "date": "10/28",
+          "pred": "漲 74%",
+          "predPct": "+1.92%",
+          "actual": "漲",
+          "actualPct": "+2.24%",
+          "hit": true
+        },
+        {
+          "date": "10/29",
+          "pred": "漲 68%",
+          "predPct": "+1.44%",
+          "actual": "漲",
+          "actualPct": "+1.58%",
+          "hit": true
+        },
+        {
+          "date": "10/30",
+          "pred": "跌 67%",
+          "predPct": "-1.36%",
+          "actual": "跌",
+          "actualPct": "-1.49%",
+          "hit": true
+        },
+        {
+          "date": "10/31",
+          "pred": "跌 59%",
+          "predPct": "-0.72%",
+          "actual": "跌",
+          "actualPct": "-0.85%",
+          "hit": true
+        },
+        {
+          "date": "11/01",
+          "pred": "跌 58%",
+          "predPct": "-0.65%",
+          "actual": "跌",
+          "actualPct": "-0.79%",
+          "hit": true
+        },
+        {
+          "date": "11/04",
+          "pred": "漲 60%",
+          "predPct": "+0.81%",
+          "actual": "漲",
+          "actualPct": "+1.05%",
+          "hit": true
+        },
+        {
+          "date": "11/05",
+          "pred": "漲 59%",
+          "predPct": "+0.71%",
+          "actual": "跌",
+          "actualPct": "-0.52%",
+          "hit": false
+        },
+        {
+          "date": "11/06",
+          "pred": "跌 66%",
+          "predPct": "-1.28%",
+          "actual": "跌",
+          "actualPct": "-1.41%",
+          "hit": true
+        },
+        {
+          "date": "11/07",
+          "pred": "漲 56%",
+          "predPct": "+0.48%",
+          "actual": "漲",
+          "actualPct": "+0.67%",
+          "hit": true
+        },
+        {
+          "date": "11/08",
+          "pred": "跌 58%",
+          "predPct": "-0.64%",
+          "actual": "跌",
+          "actualPct": "-0.74%",
+          "hit": true
+        },
+        {
+          "date": "11/11",
+          "pred": "跌 64%",
+          "predPct": "-1.10%",
+          "actual": "跌",
+          "actualPct": "-1.22%",
+          "hit": true
+        },
+        {
+          "date": "11/12",
+          "pred": "漲 65%",
+          "predPct": "+1.20%",
+          "actual": "漲",
+          "actualPct": "+1.38%",
+          "hit": true
+        },
+        {
+          "date": "11/13",
+          "pred": "漲 60%",
+          "predPct": "+0.80%",
+          "actual": "漲",
+          "actualPct": "+0.91%",
+          "hit": true
+        },
+        {
+          "date": "11/14",
+          "pred": "跌 59%",
+          "predPct": "-0.72%",
+          "actual": "跌",
+          "actualPct": "-0.88%",
+          "hit": true
+        },
+        {
+          "date": "11/15",
+          "pred": "漲 52%",
+          "predPct": "+0.18%",
+          "actual": "漲",
+          "actualPct": "+0.44%",
+          "hit": true
+        },
+        {
+          "date": "11/18",
+          "pred": "跌 68%",
+          "predPct": "-1.45%",
+          "actual": "跌",
+          "actualPct": "-1.63%",
+          "hit": true
+        },
+        {
+          "date": "11/19",
+          "pred": "跌 72%",
+          "predPct": "-1.80%",
+          "actual": "跌",
+          "actualPct": "-3.89%",
+          "hit": true
+        },
+        {
+          "date": "11/20",
+          "pred": "跌 59%",
+          "predPct": "-0.74%",
+          "actual": "跌",
+          "actualPct": "-0.71%",
+          "hit": true
+        }
       ]
     },
     "0050": {
       "code": "0050",
       "name": "元大台灣50",
+      "yfSymbol": "0050.TW",
       "annualVol": 0.25,
       "leverage": 1.0,
-      "price": "235.10",
-      "change": "-1.70",
-      "changePct": "-0.72%",
+      "price": "84.45",
+      "change": "-5.75",
+      "changePct": "-6.37%",
       "isUp": false,
-      "baseBullProb": 48,
-      "mlStatus": "ML 自動訓練完成 (60 日樣本)",
-      "learnedWeights": { "foreign": 33, "usTech": 34, "news": 19, "tech": 14 },
+      "baseBullProb": 31,
+      "mlStatus": "ML 自動訓練完成 (73 日樣本)",
+      "learnedWeights": {
+        "foreign": 25,
+        "usTech": 37,
+        "news": 22,
+        "tech": 16
+      },
       "factors": [
-        { "name": "外資與法人資金動能", "score": 33, "weight": "33%", "desc": "權值股賣壓趨緩，ETF 折價收斂" },
-        { "name": "美股科技綜合連動 (那指/費半/TSM)", "score": 61, "weight": "34%", "desc": "那指 +0.65% / 費半 +1.12% / TSM ADR +1.45%" },
-        { "name": "網路新聞與社群情緒", "score": 52, "weight": "19%", "desc": "定期定額與零股抄底買氣持續湧入" },
-        { "name": "技術面均線乖離率", "score": 46, "weight": "14%", "desc": "日 KD 進入低檔超賣區醞釀技術反彈" }
+        {
+          "name": "外資與法人資金動能",
+          "score": 39,
+          "weight": "25%",
+          "desc": "外資今日賣超 95.1 億元"
+        },
+        {
+          "name": "美股科技綜合連動 (那指/費半/TSM)",
+          "score": 15,
+          "weight": "37%",
+          "desc": "那指 -5.28% / 費半 -10.73% / TSM ADR -9.48%"
+        },
+        {
+          "name": "網路新聞與社群情緒",
+          "score": 36,
+          "weight": "22%",
+          "desc": "即時彙整 Google 財經新聞與市場多空關鍵字"
+        },
+        {
+          "name": "技術面均線乖離率",
+          "score": 15,
+          "weight": "16%",
+          "desc": "收盤價距 20 日均線乖離 -15.19%"
+        }
       ],
       "history": [
-        { "date": "10/09", "pred": "漲 55%", "predPct": "+0.34%", "actual": "跌", "actualPct": "-0.48%", "hit": false },
-        { "date": "10/12", "pred": "跌 61%", "predPct": "-0.70%", "actual": "跌", "actualPct": "-0.84%", "hit": true },
-        { "date": "10/13", "pred": "漲 66%", "predPct": "+1.02%", "actual": "漲", "actualPct": "+1.25%", "hit": true },
-        { "date": "10/14", "pred": "漲 60%", "predPct": "+0.64%", "actual": "漲", "actualPct": "+0.71%", "hit": true },
-        { "date": "10/15", "pred": "跌 57%", "predPct": "-0.45%", "actual": "跌", "actualPct": "-0.58%", "hit": true },
-        { "date": "10/16", "pred": "漲 69%", "predPct": "+1.22%", "actual": "漲", "actualPct": "+1.42%", "hit": true },
-        { "date": "10/19", "pred": "跌 64%", "predPct": "-0.88%", "actual": "跌", "actualPct": "-1.05%", "hit": true },
-        { "date": "10/21", "pred": "漲 73%", "predPct": "+1.48%", "actual": "漲", "actualPct": "+1.69%", "hit": true },
-        { "date": "10/22", "pred": "跌 65%", "predPct": "-0.95%", "actual": "跌", "actualPct": "-1.12%", "hit": true },
-        { "date": "10/23", "pred": "跌 71%", "predPct": "-1.34%", "actual": "跌", "actualPct": "-1.48%", "hit": true },
-        { "date": "10/24", "pred": "漲 65%", "predPct": "+0.94%", "actual": "漲", "actualPct": "+1.08%", "hit": true },
-        { "date": "10/25", "pred": "跌 63%", "predPct": "-0.82%", "actual": "跌", "actualPct": "-0.96%", "hit": true },
-        { "date": "10/28", "pred": "漲 57%", "predPct": "+0.44%", "actual": "漲", "actualPct": "+0.59%", "hit": true },
-        { "date": "10/29", "pred": "漲 67%", "predPct": "+1.08%", "actual": "漲", "actualPct": "+1.21%", "hit": true },
-        { "date": "10/30", "pred": "跌 58%", "predPct": "-0.51%", "actual": "跌", "actualPct": "-0.67%", "hit": true },
-        { "date": "10/31", "pred": "跌 65%", "predPct": "-0.95%", "actual": "跌", "actualPct": "-1.10%", "hit": true },
-        { "date": "11/01", "pred": "跌 56%", "predPct": "-0.39%", "actual": "跌", "actualPct": "-0.52%", "hit": true },
-        { "date": "11/04", "pred": "跌 51%", "predPct": "-0.08%", "actual": "漲", "actualPct": "+0.35%", "hit": false },
-        { "date": "11/05", "pred": "跌 58%", "predPct": "-0.52%", "actual": "跌", "actualPct": "-0.68%", "hit": true },
-        { "date": "11/06", "pred": "跌 69%", "predPct": "-1.20%", "actual": "跌", "actualPct": "-1.38%", "hit": true },
-        { "date": "11/07", "pred": "漲 55%", "predPct": "+0.33%", "actual": "跌", "actualPct": "-0.29%", "hit": false },
-        { "date": "11/08", "pred": "跌 60%", "predPct": "-0.64%", "actual": "跌", "actualPct": "-0.75%", "hit": true },
-        { "date": "11/11", "pred": "跌 55%", "predPct": "-0.34%", "actual": "跌", "actualPct": "-0.46%", "hit": true },
-        { "date": "11/12", "pred": "漲 63%", "predPct": "+0.83%", "actual": "漲", "actualPct": "+0.98%", "hit": true },
-        { "date": "11/13", "pred": "漲 56%", "predPct": "+0.38%", "actual": "漲", "actualPct": "+0.51%", "hit": true },
-        { "date": "11/14", "pred": "跌 65%", "predPct": "-0.94%", "actual": "跌", "actualPct": "-1.14%", "hit": true },
-        { "date": "11/15", "pred": "跌 53%", "predPct": "-0.20%", "actual": "漲", "actualPct": "+0.41%", "hit": false },
-        { "date": "11/18", "pred": "跌 70%", "predPct": "-1.26%", "actual": "跌", "actualPct": "-1.42%", "hit": true },
-        { "date": "11/19", "pred": "跌 75%", "predPct": "-1.60%", "actual": "跌", "actualPct": "-3.62%", "hit": true },
-        { "date": "11/20", "pred": "跌 64%", "predPct": "-0.89%", "actual": "跌", "actualPct": "-0.72%", "hit": true }
+        {
+          "date": "10/09",
+          "pred": "漲 55%",
+          "predPct": "+0.34%",
+          "actual": "跌",
+          "actualPct": "-0.48%",
+          "hit": false
+        },
+        {
+          "date": "10/12",
+          "pred": "跌 61%",
+          "predPct": "-0.70%",
+          "actual": "跌",
+          "actualPct": "-0.84%",
+          "hit": true
+        },
+        {
+          "date": "10/13",
+          "pred": "漲 66%",
+          "predPct": "+1.02%",
+          "actual": "漲",
+          "actualPct": "+1.25%",
+          "hit": true
+        },
+        {
+          "date": "10/14",
+          "pred": "漲 60%",
+          "predPct": "+0.64%",
+          "actual": "漲",
+          "actualPct": "+0.71%",
+          "hit": true
+        },
+        {
+          "date": "10/15",
+          "pred": "跌 57%",
+          "predPct": "-0.45%",
+          "actual": "跌",
+          "actualPct": "-0.58%",
+          "hit": true
+        },
+        {
+          "date": "10/16",
+          "pred": "漲 69%",
+          "predPct": "+1.22%",
+          "actual": "漲",
+          "actualPct": "+1.42%",
+          "hit": true
+        },
+        {
+          "date": "10/19",
+          "pred": "跌 64%",
+          "predPct": "-0.88%",
+          "actual": "跌",
+          "actualPct": "-1.05%",
+          "hit": true
+        },
+        {
+          "date": "10/21",
+          "pred": "漲 73%",
+          "predPct": "+1.48%",
+          "actual": "漲",
+          "actualPct": "+1.69%",
+          "hit": true
+        },
+        {
+          "date": "10/22",
+          "pred": "跌 65%",
+          "predPct": "-0.95%",
+          "actual": "跌",
+          "actualPct": "-1.12%",
+          "hit": true
+        },
+        {
+          "date": "10/23",
+          "pred": "跌 71%",
+          "predPct": "-1.34%",
+          "actual": "跌",
+          "actualPct": "-1.48%",
+          "hit": true
+        },
+        {
+          "date": "10/24",
+          "pred": "漲 65%",
+          "predPct": "+0.94%",
+          "actual": "漲",
+          "actualPct": "+1.08%",
+          "hit": true
+        },
+        {
+          "date": "10/25",
+          "pred": "跌 63%",
+          "predPct": "-0.82%",
+          "actual": "跌",
+          "actualPct": "-0.96%",
+          "hit": true
+        },
+        {
+          "date": "10/28",
+          "pred": "漲 57%",
+          "predPct": "+0.44%",
+          "actual": "漲",
+          "actualPct": "+0.59%",
+          "hit": true
+        },
+        {
+          "date": "10/29",
+          "pred": "漲 67%",
+          "predPct": "+1.08%",
+          "actual": "漲",
+          "actualPct": "+1.21%",
+          "hit": true
+        },
+        {
+          "date": "10/30",
+          "pred": "跌 58%",
+          "predPct": "-0.51%",
+          "actual": "跌",
+          "actualPct": "-0.67%",
+          "hit": true
+        },
+        {
+          "date": "10/31",
+          "pred": "跌 65%",
+          "predPct": "-0.95%",
+          "actual": "跌",
+          "actualPct": "-1.10%",
+          "hit": true
+        },
+        {
+          "date": "11/01",
+          "pred": "跌 56%",
+          "predPct": "-0.39%",
+          "actual": "跌",
+          "actualPct": "-0.52%",
+          "hit": true
+        },
+        {
+          "date": "11/04",
+          "pred": "跌 51%",
+          "predPct": "-0.08%",
+          "actual": "漲",
+          "actualPct": "+0.35%",
+          "hit": false
+        },
+        {
+          "date": "11/05",
+          "pred": "跌 58%",
+          "predPct": "-0.52%",
+          "actual": "跌",
+          "actualPct": "-0.68%",
+          "hit": true
+        },
+        {
+          "date": "11/06",
+          "pred": "跌 69%",
+          "predPct": "-1.20%",
+          "actual": "跌",
+          "actualPct": "-1.38%",
+          "hit": true
+        },
+        {
+          "date": "11/07",
+          "pred": "漲 55%",
+          "predPct": "+0.33%",
+          "actual": "跌",
+          "actualPct": "-0.29%",
+          "hit": false
+        },
+        {
+          "date": "11/08",
+          "pred": "跌 60%",
+          "predPct": "-0.64%",
+          "actual": "跌",
+          "actualPct": "-0.75%",
+          "hit": true
+        },
+        {
+          "date": "11/11",
+          "pred": "跌 55%",
+          "predPct": "-0.34%",
+          "actual": "跌",
+          "actualPct": "-0.46%",
+          "hit": true
+        },
+        {
+          "date": "11/12",
+          "pred": "漲 63%",
+          "predPct": "+0.83%",
+          "actual": "漲",
+          "actualPct": "+0.98%",
+          "hit": true
+        },
+        {
+          "date": "11/13",
+          "pred": "漲 56%",
+          "predPct": "+0.38%",
+          "actual": "漲",
+          "actualPct": "+0.51%",
+          "hit": true
+        },
+        {
+          "date": "11/14",
+          "pred": "跌 65%",
+          "predPct": "-0.94%",
+          "actual": "跌",
+          "actualPct": "-1.14%",
+          "hit": true
+        },
+        {
+          "date": "11/15",
+          "pred": "跌 53%",
+          "predPct": "-0.20%",
+          "actual": "漲",
+          "actualPct": "+0.41%",
+          "hit": false
+        },
+        {
+          "date": "11/18",
+          "pred": "跌 70%",
+          "predPct": "-1.26%",
+          "actual": "跌",
+          "actualPct": "-1.42%",
+          "hit": true
+        },
+        {
+          "date": "11/19",
+          "pred": "跌 75%",
+          "predPct": "-1.60%",
+          "actual": "跌",
+          "actualPct": "-3.62%",
+          "hit": true
+        },
+        {
+          "date": "11/20",
+          "pred": "跌 64%",
+          "predPct": "-0.89%",
+          "actual": "跌",
+          "actualPct": "-0.72%",
+          "hit": true
+        }
       ]
     },
     "00662": {
       "code": "00662",
       "name": "富邦NASDAQ",
+      "yfSymbol": "00662.TW",
       "annualVol": 0.29,
       "leverage": 1.0,
-      "price": "104.80",
-      "change": "+0.75",
-      "changePct": "+0.72%",
-      "isUp": true,
-      "baseBullProb": 59,
-      "mlStatus": "ML 自動訓練完成 (60 日樣本)",
-      "learnedWeights": { "foreign": 28, "usTech": 40, "news": 17, "tech": 15 },
+      "price": "22.15",
+      "change": "-0.98",
+      "changePct": "-4.24%",
+      "isUp": false,
+      "baseBullProb": 37,
+      "mlStatus": "ML 自動訓練完成 (73 日樣本)",
+      "learnedWeights": {
+        "foreign": 22,
+        "usTech": 43,
+        "news": 27,
+        "tech": 8
+      },
       "factors": [
-        { "name": "外資與法人資金動能", "score": 55, "weight": "28%", "desc": "美股科技基金資金回流，台幣匯率回穩" },
-        { "name": "美股科技綜合連動 (那指/費半/TSM)", "score": 61, "weight": "40%", "desc": "那指 +0.65% / 費半 +1.12% / TSM ADR +1.45%" },
-        { "name": "網路新聞與社群情緒", "score": 58, "weight": "17%", "desc": "美股大型雲端與 AI 巨頭財報展望穩健" },
-        { "name": "技術面均線乖離率", "score": 58, "weight": "15%", "desc": "站穩季線支撐上方，多頭架構維持完整" }
+        {
+          "name": "外資與法人資金動能",
+          "score": 23,
+          "weight": "22%",
+          "desc": "美股科技資金連動（綜合美股動能 -8.03%）"
+        },
+        {
+          "name": "美股科技綜合連動 (那指/費半/TSM)",
+          "score": 15,
+          "weight": "43%",
+          "desc": "那指 -5.28% / 費半 -10.73% / TSM ADR -9.48%"
+        },
+        {
+          "name": "網路新聞與社群情緒",
+          "score": 36,
+          "weight": "27%",
+          "desc": "AI 與半導體財報及利率預期主導短線情緒"
+        },
+        {
+          "name": "技術面均線乖離率",
+          "score": 15,
+          "weight": "8%",
+          "desc": "距 20 日均線乖離 -69.09%"
+        }
       ],
       "history": [
-        { "date": "10/09", "pred": "漲 61%", "predPct": "+0.78%", "actual": "漲", "actualPct": "+0.92%", "hit": true },
-        { "date": "10/12", "pred": "跌 56%", "predPct": "-0.42%", "actual": "跌", "actualPct": "-0.55%", "hit": true },
-        { "date": "10/13", "pred": "漲 65%", "predPct": "+1.08%", "actual": "漲", "actualPct": "+1.34%", "hit": true },
-        { "date": "10/14", "pred": "漲 58%", "predPct": "+0.56%", "actual": "漲", "actualPct": "+0.62%", "hit": true },
-        { "date": "10/15", "pred": "跌 54%", "predPct": "-0.28%", "actual": "漲", "actualPct": "+0.31%", "hit": false },
-        { "date": "10/16", "pred": "漲 67%", "predPct": "+1.22%", "actual": "漲", "actualPct": "+1.48%", "hit": true },
-        { "date": "10/19", "pred": "跌 60%", "predPct": "-0.70%", "actual": "跌", "actualPct": "-0.85%", "hit": true },
-        { "date": "10/21", "pred": "漲 59%", "predPct": "+0.63%", "actual": "漲", "actualPct": "+0.74%", "hit": true },
-        { "date": "10/22", "pred": "漲 68%", "predPct": "+1.28%", "actual": "漲", "actualPct": "+1.52%", "hit": true },
-        { "date": "10/23", "pred": "跌 55%", "predPct": "-0.35%", "actual": "跌", "actualPct": "-0.44%", "hit": true },
-        { "date": "10/24", "pred": "漲 62%", "predPct": "+0.85%", "actual": "漲", "actualPct": "+0.91%", "hit": true },
-        { "date": "10/25", "pred": "跌 61%", "predPct": "-0.78%", "actual": "跌", "actualPct": "-0.96%", "hit": true },
-        { "date": "10/28", "pred": "漲 58%", "predPct": "+0.55%", "actual": "漲", "actualPct": "+0.68%", "hit": true },
-        { "date": "10/29", "pred": "漲 64%", "predPct": "+0.98%", "actual": "漲", "actualPct": "+1.15%", "hit": true },
-        { "date": "10/30", "pred": "跌 59%", "predPct": "-0.63%", "actual": "跌", "actualPct": "-0.79%", "hit": true },
-        { "date": "10/31", "pred": "跌 62%", "predPct": "-0.84%", "actual": "跌", "actualPct": "-1.02%", "hit": true },
-        { "date": "11/01", "pred": "漲 56%", "predPct": "+0.42%", "actual": "跌", "actualPct": "-0.36%", "hit": false },
-        { "date": "11/04", "pred": "漲 60%", "predPct": "+0.71%", "actual": "漲", "actualPct": "+0.88%", "hit": true },
-        { "date": "11/05", "pred": "跌 58%", "predPct": "-0.56%", "actual": "跌", "actualPct": "-0.71%", "hit": true },
-        { "date": "11/06", "pred": "跌 66%", "predPct": "-1.14%", "actual": "跌", "actualPct": "-1.32%", "hit": true },
-        { "date": "11/07", "pred": "漲 61%", "predPct": "+0.78%", "actual": "漲", "actualPct": "+0.95%", "hit": true },
-        { "date": "11/08", "pred": "漲 55%", "predPct": "+0.35%", "actual": "跌", "actualPct": "-0.28%", "hit": false },
-        { "date": "11/11", "pred": "跌 57%", "predPct": "-0.49%", "actual": "跌", "actualPct": "-0.61%", "hit": true },
-        { "date": "11/12", "pred": "漲 64%", "predPct": "+0.99%", "actual": "漲", "actualPct": "+1.18%", "hit": true },
-        { "date": "11/13", "pred": "漲 59%", "predPct": "+0.64%", "actual": "漲", "actualPct": "+0.72%", "hit": true },
-        { "date": "11/14", "pred": "跌 63%", "predPct": "-0.92%", "actual": "跌", "actualPct": "-1.10%", "hit": true },
-        { "date": "11/15", "pred": "漲 57%", "predPct": "+0.49%", "actual": "漲", "actualPct": "+0.54%", "hit": true },
-        { "date": "11/18", "pred": "跌 65%", "predPct": "-1.06%", "actual": "跌", "actualPct": "-1.24%", "hit": true },
-        { "date": "11/19", "pred": "跌 68%", "predPct": "-1.28%", "actual": "跌", "actualPct": "-1.65%", "hit": true },
-        { "date": "11/20", "pred": "漲 56%", "predPct": "+0.42%", "actual": "漲", "actualPct": "+0.72%", "hit": true }
+        {
+          "date": "10/09",
+          "pred": "漲 61%",
+          "predPct": "+0.78%",
+          "actual": "漲",
+          "actualPct": "+0.92%",
+          "hit": true
+        },
+        {
+          "date": "10/12",
+          "pred": "跌 56%",
+          "predPct": "-0.42%",
+          "actual": "跌",
+          "actualPct": "-0.55%",
+          "hit": true
+        },
+        {
+          "date": "10/13",
+          "pred": "漲 65%",
+          "predPct": "+1.08%",
+          "actual": "漲",
+          "actualPct": "+1.34%",
+          "hit": true
+        },
+        {
+          "date": "10/14",
+          "pred": "漲 58%",
+          "predPct": "+0.56%",
+          "actual": "漲",
+          "actualPct": "+0.62%",
+          "hit": true
+        },
+        {
+          "date": "10/15",
+          "pred": "跌 54%",
+          "predPct": "-0.28%",
+          "actual": "漲",
+          "actualPct": "+0.31%",
+          "hit": false
+        },
+        {
+          "date": "10/16",
+          "pred": "漲 67%",
+          "predPct": "+1.22%",
+          "actual": "漲",
+          "actualPct": "+1.48%",
+          "hit": true
+        },
+        {
+          "date": "10/19",
+          "pred": "跌 60%",
+          "predPct": "-0.70%",
+          "actual": "跌",
+          "actualPct": "-0.85%",
+          "hit": true
+        },
+        {
+          "date": "10/21",
+          "pred": "漲 59%",
+          "predPct": "+0.63%",
+          "actual": "漲",
+          "actualPct": "+0.74%",
+          "hit": true
+        },
+        {
+          "date": "10/22",
+          "pred": "漲 68%",
+          "predPct": "+1.28%",
+          "actual": "漲",
+          "actualPct": "+1.52%",
+          "hit": true
+        },
+        {
+          "date": "10/23",
+          "pred": "跌 55%",
+          "predPct": "-0.35%",
+          "actual": "跌",
+          "actualPct": "-0.44%",
+          "hit": true
+        },
+        {
+          "date": "10/24",
+          "pred": "漲 62%",
+          "predPct": "+0.85%",
+          "actual": "漲",
+          "actualPct": "+0.91%",
+          "hit": true
+        },
+        {
+          "date": "10/25",
+          "pred": "跌 61%",
+          "predPct": "-0.78%",
+          "actual": "跌",
+          "actualPct": "-0.96%",
+          "hit": true
+        },
+        {
+          "date": "10/28",
+          "pred": "漲 58%",
+          "predPct": "+0.55%",
+          "actual": "漲",
+          "actualPct": "+0.68%",
+          "hit": true
+        },
+        {
+          "date": "10/29",
+          "pred": "漲 64%",
+          "predPct": "+0.98%",
+          "actual": "漲",
+          "actualPct": "+1.15%",
+          "hit": true
+        },
+        {
+          "date": "10/30",
+          "pred": "跌 59%",
+          "predPct": "-0.63%",
+          "actual": "跌",
+          "actualPct": "-0.79%",
+          "hit": true
+        },
+        {
+          "date": "10/31",
+          "pred": "跌 62%",
+          "predPct": "-0.84%",
+          "actual": "跌",
+          "actualPct": "-1.02%",
+          "hit": true
+        },
+        {
+          "date": "11/01",
+          "pred": "漲 56%",
+          "predPct": "+0.42%",
+          "actual": "跌",
+          "actualPct": "-0.36%",
+          "hit": false
+        },
+        {
+          "date": "11/04",
+          "pred": "漲 60%",
+          "predPct": "+0.71%",
+          "actual": "漲",
+          "actualPct": "+0.88%",
+          "hit": true
+        },
+        {
+          "date": "11/05",
+          "pred": "跌 58%",
+          "predPct": "-0.56%",
+          "actual": "跌",
+          "actualPct": "-0.71%",
+          "hit": true
+        },
+        {
+          "date": "11/06",
+          "pred": "跌 66%",
+          "predPct": "-1.14%",
+          "actual": "跌",
+          "actualPct": "-1.32%",
+          "hit": true
+        },
+        {
+          "date": "11/07",
+          "pred": "漲 61%",
+          "predPct": "+0.78%",
+          "actual": "漲",
+          "actualPct": "+0.95%",
+          "hit": true
+        },
+        {
+          "date": "11/08",
+          "pred": "漲 55%",
+          "predPct": "+0.35%",
+          "actual": "跌",
+          "actualPct": "-0.28%",
+          "hit": false
+        },
+        {
+          "date": "11/11",
+          "pred": "跌 57%",
+          "predPct": "-0.49%",
+          "actual": "跌",
+          "actualPct": "-0.61%",
+          "hit": true
+        },
+        {
+          "date": "11/12",
+          "pred": "漲 64%",
+          "predPct": "+0.99%",
+          "actual": "漲",
+          "actualPct": "+1.18%",
+          "hit": true
+        },
+        {
+          "date": "11/13",
+          "pred": "漲 59%",
+          "predPct": "+0.64%",
+          "actual": "漲",
+          "actualPct": "+0.72%",
+          "hit": true
+        },
+        {
+          "date": "11/14",
+          "pred": "跌 63%",
+          "predPct": "-0.92%",
+          "actual": "跌",
+          "actualPct": "-1.10%",
+          "hit": true
+        },
+        {
+          "date": "11/15",
+          "pred": "漲 57%",
+          "predPct": "+0.49%",
+          "actual": "漲",
+          "actualPct": "+0.54%",
+          "hit": true
+        },
+        {
+          "date": "11/18",
+          "pred": "跌 65%",
+          "predPct": "-1.06%",
+          "actual": "跌",
+          "actualPct": "-1.24%",
+          "hit": true
+        },
+        {
+          "date": "11/19",
+          "pred": "跌 68%",
+          "predPct": "-1.28%",
+          "actual": "跌",
+          "actualPct": "-1.65%",
+          "hit": true
+        },
+        {
+          "date": "11/20",
+          "pred": "漲 56%",
+          "predPct": "+0.42%",
+          "actual": "漲",
+          "actualPct": "+0.72%",
+          "hit": true
+        }
       ]
     },
     "00631L": {
       "code": "00631L",
       "name": "元大台灣50正2",
-      "annualVol": 0.50,
+      "yfSymbol": "00631L.TW",
+      "annualVol": 0.5,
       "leverage": 2.0,
-      "price": "268.40",
-      "change": "-3.90",
-      "changePct": "-1.43%",
+      "price": "21.24",
+      "change": "-3.33",
+      "changePct": "-13.55%",
       "isUp": false,
-      "baseBullProb": 47,
-      "mlStatus": "ML 自動訓練完成 (60 日樣本)",
-      "learnedWeights": { "foreign": 34, "usTech": 33, "news": 18, "tech": 15 },
+      "baseBullProb": 31,
+      "mlStatus": "ML 自動訓練完成 (73 日樣本)",
+      "learnedWeights": {
+        "foreign": 17,
+        "usTech": 35,
+        "news": 37,
+        "tech": 11
+      },
       "factors": [
-        { "name": "外資與法人資金動能", "score": 32, "weight": "34%", "desc": "兩倍槓桿追蹤大盤，受外資現貨與期貨淨部位雙重放大影響" },
-        { "name": "美股科技綜合連動 (那指/費半/TSM)", "score": 61, "weight": "33%", "desc": "那指 +0.65% / 費半 +1.12% / TSM ADR +1.45%" },
-        { "name": "網路新聞與社群情緒", "score": 47, "weight": "18%", "desc": "短線波段資金觀望大盤 38,000 點支撐力道" },
-        { "name": "技術面均線乖離率", "score": 45, "weight": "15%", "desc": "日線連跌後負乖離擴大，具備高彈性反彈空間" }
+        {
+          "name": "外資與法人資金動能",
+          "score": 39,
+          "weight": "17%",
+          "desc": "外資今日賣超 95.1 億元"
+        },
+        {
+          "name": "美股科技綜合連動 (那指/費半/TSM)",
+          "score": 15,
+          "weight": "35%",
+          "desc": "那指 -5.28% / 費半 -10.73% / TSM ADR -9.48%"
+        },
+        {
+          "name": "網路新聞與社群情緒",
+          "score": 36,
+          "weight": "37%",
+          "desc": "即時彙整 Google 財經新聞與市場多空關鍵字"
+        },
+        {
+          "name": "技術面均線乖離率",
+          "score": 15,
+          "weight": "11%",
+          "desc": "收盤價距 20 日均線乖離 -30.57%"
+        }
       ],
       "history": [
-        { "date": "10/09", "pred": "漲 56%", "predPct": "+0.86%", "actual": "跌", "actualPct": "-1.05%", "hit": false },
-        { "date": "10/12", "pred": "跌 63%", "predPct": "-1.85%", "actual": "跌", "actualPct": "-1.92%", "hit": true },
-        { "date": "10/13", "pred": "漲 65%", "predPct": "+2.15%", "actual": "漲", "actualPct": "+2.48%", "hit": true },
-        { "date": "10/14", "pred": "漲 60%", "predPct": "+1.42%", "actual": "漲", "actualPct": "+1.51%", "hit": true },
-        { "date": "10/15", "pred": "跌 57%", "predPct": "-0.98%", "actual": "跌", "actualPct": "-1.18%", "hit": true },
-        { "date": "10/16", "pred": "漲 69%", "predPct": "+2.72%", "actual": "漲", "actualPct": "+2.96%", "hit": true },
-        { "date": "10/19", "pred": "跌 64%", "predPct": "-1.98%", "actual": "跌", "actualPct": "-2.15%", "hit": true },
-        { "date": "10/21", "pred": "漲 72%", "predPct": "+3.15%", "actual": "漲", "actualPct": "+3.42%", "hit": true },
-        { "date": "10/22", "pred": "跌 65%", "predPct": "-2.14%", "actual": "跌", "actualPct": "-2.30%", "hit": true },
-        { "date": "10/23", "pred": "跌 71%", "predPct": "-2.98%", "actual": "跌", "actualPct": "-3.12%", "hit": true },
-        { "date": "10/24", "pred": "漲 65%", "predPct": "+2.14%", "actual": "漲", "actualPct": "+2.25%", "hit": true },
-        { "date": "10/25", "pred": "跌 63%", "predPct": "-1.86%", "actual": "跌", "actualPct": "-2.04%", "hit": true },
-        { "date": "10/28", "pred": "漲 57%", "predPct": "+0.99%", "actual": "漲", "actualPct": "+1.22%", "hit": true },
-        { "date": "10/29", "pred": "漲 67%", "predPct": "+2.42%", "actual": "漲", "actualPct": "+2.58%", "hit": true },
-        { "date": "10/30", "pred": "跌 58%", "predPct": "-1.14%", "actual": "跌", "actualPct": "-1.36%", "hit": true },
-        { "date": "10/31", "pred": "跌 65%", "predPct": "-2.14%", "actual": "跌", "actualPct": "-2.28%", "hit": true },
-        { "date": "11/01", "pred": "跌 56%", "predPct": "-0.86%", "actual": "跌", "actualPct": "-1.08%", "hit": true },
-        { "date": "11/04", "pred": "跌 52%", "predPct": "-0.28%", "actual": "漲", "actualPct": "+0.74%", "hit": false },
-        { "date": "11/05", "pred": "跌 58%", "predPct": "-1.14%", "actual": "跌", "actualPct": "-1.42%", "hit": true },
-        { "date": "11/06", "pred": "跌 69%", "predPct": "-2.72%", "actual": "跌", "actualPct": "-2.88%", "hit": true },
-        { "date": "11/07", "pred": "漲 55%", "predPct": "+0.71%", "actual": "跌", "actualPct": "-0.62%", "hit": false },
-        { "date": "11/08", "pred": "跌 60%", "predPct": "-1.42%", "actual": "跌", "actualPct": "-1.56%", "hit": true },
-        { "date": "11/11", "pred": "跌 55%", "predPct": "-0.71%", "actual": "跌", "actualPct": "-0.94%", "hit": true },
-        { "date": "11/12", "pred": "漲 63%", "predPct": "+1.85%", "actual": "漲", "actualPct": "+2.05%", "hit": true },
-        { "date": "11/13", "pred": "漲 56%", "predPct": "+0.86%", "actual": "漲", "actualPct": "+1.04%", "hit": true },
-        { "date": "11/14", "pred": "跌 65%", "predPct": "-2.14%", "actual": "跌", "actualPct": "-2.35%", "hit": true },
-        { "date": "11/15", "pred": "跌 53%", "predPct": "-0.43%", "actual": "漲", "actualPct": "+0.85%", "hit": false },
-        { "date": "11/18", "pred": "跌 70%", "predPct": "-2.85%", "actual": "跌", "actualPct": "-2.98%", "hit": true },
-        { "date": "11/19", "pred": "跌 75%", "predPct": "-3.56%", "actual": "跌", "actualPct": "-7.45%", "hit": true },
-        { "date": "11/20", "pred": "跌 64%", "predPct": "-1.99%", "actual": "跌", "actualPct": "-1.43%", "hit": true }
+        {
+          "date": "10/09",
+          "pred": "漲 56%",
+          "predPct": "+0.86%",
+          "actual": "跌",
+          "actualPct": "-1.05%",
+          "hit": false
+        },
+        {
+          "date": "10/12",
+          "pred": "跌 63%",
+          "predPct": "-1.85%",
+          "actual": "跌",
+          "actualPct": "-1.92%",
+          "hit": true
+        },
+        {
+          "date": "10/13",
+          "pred": "漲 65%",
+          "predPct": "+2.15%",
+          "actual": "漲",
+          "actualPct": "+2.48%",
+          "hit": true
+        },
+        {
+          "date": "10/14",
+          "pred": "漲 60%",
+          "predPct": "+1.42%",
+          "actual": "漲",
+          "actualPct": "+1.51%",
+          "hit": true
+        },
+        {
+          "date": "10/15",
+          "pred": "跌 57%",
+          "predPct": "-0.98%",
+          "actual": "跌",
+          "actualPct": "-1.18%",
+          "hit": true
+        },
+        {
+          "date": "10/16",
+          "pred": "漲 69%",
+          "predPct": "+2.72%",
+          "actual": "漲",
+          "actualPct": "+2.96%",
+          "hit": true
+        },
+        {
+          "date": "10/19",
+          "pred": "跌 64%",
+          "predPct": "-1.98%",
+          "actual": "跌",
+          "actualPct": "-2.15%",
+          "hit": true
+        },
+        {
+          "date": "10/21",
+          "pred": "漲 72%",
+          "predPct": "+3.15%",
+          "actual": "漲",
+          "actualPct": "+3.42%",
+          "hit": true
+        },
+        {
+          "date": "10/22",
+          "pred": "跌 65%",
+          "predPct": "-2.14%",
+          "actual": "跌",
+          "actualPct": "-2.30%",
+          "hit": true
+        },
+        {
+          "date": "10/23",
+          "pred": "跌 71%",
+          "predPct": "-2.98%",
+          "actual": "跌",
+          "actualPct": "-3.12%",
+          "hit": true
+        },
+        {
+          "date": "10/24",
+          "pred": "漲 65%",
+          "predPct": "+2.14%",
+          "actual": "漲",
+          "actualPct": "+2.25%",
+          "hit": true
+        },
+        {
+          "date": "10/25",
+          "pred": "跌 63%",
+          "predPct": "-1.86%",
+          "actual": "跌",
+          "actualPct": "-2.04%",
+          "hit": true
+        },
+        {
+          "date": "10/28",
+          "pred": "漲 57%",
+          "predPct": "+0.99%",
+          "actual": "漲",
+          "actualPct": "+1.22%",
+          "hit": true
+        },
+        {
+          "date": "10/29",
+          "pred": "漲 67%",
+          "predPct": "+2.42%",
+          "actual": "漲",
+          "actualPct": "+2.58%",
+          "hit": true
+        },
+        {
+          "date": "10/30",
+          "pred": "跌 58%",
+          "predPct": "-1.14%",
+          "actual": "跌",
+          "actualPct": "-1.36%",
+          "hit": true
+        },
+        {
+          "date": "10/31",
+          "pred": "跌 65%",
+          "predPct": "-2.14%",
+          "actual": "跌",
+          "actualPct": "-2.28%",
+          "hit": true
+        },
+        {
+          "date": "11/01",
+          "pred": "跌 56%",
+          "predPct": "-0.86%",
+          "actual": "跌",
+          "actualPct": "-1.08%",
+          "hit": true
+        },
+        {
+          "date": "11/04",
+          "pred": "跌 52%",
+          "predPct": "-0.28%",
+          "actual": "漲",
+          "actualPct": "+0.74%",
+          "hit": false
+        },
+        {
+          "date": "11/05",
+          "pred": "跌 58%",
+          "predPct": "-1.14%",
+          "actual": "跌",
+          "actualPct": "-1.42%",
+          "hit": true
+        },
+        {
+          "date": "11/06",
+          "pred": "跌 69%",
+          "predPct": "-2.72%",
+          "actual": "跌",
+          "actualPct": "-2.88%",
+          "hit": true
+        },
+        {
+          "date": "11/07",
+          "pred": "漲 55%",
+          "predPct": "+0.71%",
+          "actual": "跌",
+          "actualPct": "-0.62%",
+          "hit": false
+        },
+        {
+          "date": "11/08",
+          "pred": "跌 60%",
+          "predPct": "-1.42%",
+          "actual": "跌",
+          "actualPct": "-1.56%",
+          "hit": true
+        },
+        {
+          "date": "11/11",
+          "pred": "跌 55%",
+          "predPct": "-0.71%",
+          "actual": "跌",
+          "actualPct": "-0.94%",
+          "hit": true
+        },
+        {
+          "date": "11/12",
+          "pred": "漲 63%",
+          "predPct": "+1.85%",
+          "actual": "漲",
+          "actualPct": "+2.05%",
+          "hit": true
+        },
+        {
+          "date": "11/13",
+          "pred": "漲 56%",
+          "predPct": "+0.86%",
+          "actual": "漲",
+          "actualPct": "+1.04%",
+          "hit": true
+        },
+        {
+          "date": "11/14",
+          "pred": "跌 65%",
+          "predPct": "-2.14%",
+          "actual": "跌",
+          "actualPct": "-2.35%",
+          "hit": true
+        },
+        {
+          "date": "11/15",
+          "pred": "跌 53%",
+          "predPct": "-0.43%",
+          "actual": "漲",
+          "actualPct": "+0.85%",
+          "hit": false
+        },
+        {
+          "date": "11/18",
+          "pred": "跌 70%",
+          "predPct": "-2.85%",
+          "actual": "跌",
+          "actualPct": "-2.98%",
+          "hit": true
+        },
+        {
+          "date": "11/19",
+          "pred": "跌 75%",
+          "predPct": "-3.56%",
+          "actual": "跌",
+          "actualPct": "-7.45%",
+          "hit": true
+        },
+        {
+          "date": "11/20",
+          "pred": "跌 64%",
+          "predPct": "-1.99%",
+          "actual": "跌",
+          "actualPct": "-1.43%",
+          "hit": true
+        }
       ]
     },
     "00632R": {
       "code": "00632R",
       "name": "元大台灣50反1",
+      "yfSymbol": "00632R.TW",
       "annualVol": 0.25,
       "leverage": -1.0,
-      "price": "22.45",
-      "change": "+0.18",
-      "changePct": "+0.81%",
+      "price": "12.52",
+      "change": "+0.84",
+      "changePct": "+7.19%",
       "isUp": true,
-      "baseBullProb": 52,
-      "mlStatus": "ML 自動訓練完成 (60 日樣本)",
-      "learnedWeights": { "foreign": 34, "usTech": 33, "news": 18, "tech": 15 },
+      "baseBullProb": 65,
+      "mlStatus": "ML 自動訓練完成 (73 日樣本)",
+      "learnedWeights": {
+        "foreign": 25,
+        "usTech": 11,
+        "news": 22,
+        "tech": 42
+      },
       "factors": [
-        { "name": "外資與法人資金動能", "score": 67, "weight": "34%", "desc": "反向 ETF 邏輯：外資現貨偏賣超且期貨空單高檔，有利反1走勢" },
-        { "name": "美股科技綜合連動 (那指/費半/TSM)", "score": 39, "weight": "33%", "desc": "反向美股連動：那指 +0.65% / 費半 +1.12% / TSM ADR +1.45%" },
-        { "name": "網路新聞與社群情緒", "score": 52, "weight": "18%", "desc": "大盤跌破年線後市場避險需求仍處高檔" },
-        { "name": "技術面均線乖離率", "score": 58, "weight": "15%", "desc": "股價站穩所有短中期均線之上，避險多頭格局" }
+        {
+          "name": "外資與法人資金動能",
+          "score": 61,
+          "weight": "25%",
+          "desc": "反向避險連動：外資今日賣超 95.1 億元（有利反1表現）"
+        },
+        {
+          "name": "美股科技綜合連動 (那指/費半/TSM)",
+          "score": 85,
+          "weight": "11%",
+          "desc": "反向美股連動：那指 -5.28% / 費半 -10.73% / TSM ADR -9.48%"
+        },
+        {
+          "name": "網路新聞與社群情緒",
+          "score": 64,
+          "weight": "22%",
+          "desc": "市場避險情緒升溫時有利反向 ETF 走勢"
+        },
+        {
+          "name": "技術面均線乖離率",
+          "score": 85,
+          "weight": "42%",
+          "desc": "距 20 日均線乖離 +17.47%"
+        }
       ],
       "history": [
-        { "date": "10/09", "pred": "跌 55%", "predPct": "-0.34%", "actual": "漲", "actualPct": "+0.51%", "hit": false },
-        { "date": "10/12", "pred": "漲 61%", "predPct": "+0.70%", "actual": "漲", "actualPct": "+0.88%", "hit": true },
-        { "date": "10/13", "pred": "跌 66%", "predPct": "-1.02%", "actual": "跌", "actualPct": "-1.21%", "hit": true },
-        { "date": "10/14", "pred": "跌 60%", "predPct": "-0.64%", "actual": "跌", "actualPct": "-0.74%", "hit": true },
-        { "date": "10/15", "pred": "漲 57%", "predPct": "+0.45%", "actual": "漲", "actualPct": "+0.61%", "hit": true },
-        { "date": "10/16", "pred": "跌 69%", "predPct": "-1.22%", "actual": "跌", "actualPct": "-1.39%", "hit": true },
-        { "date": "10/19", "pred": "漲 64%", "predPct": "+0.88%", "actual": "漲", "actualPct": "+1.08%", "hit": true },
-        { "date": "10/21", "pred": "跌 73%", "predPct": "-1.48%", "actual": "跌", "actualPct": "-1.65%", "hit": true },
-        { "date": "10/22", "pred": "漲 65%", "predPct": "+0.95%", "actual": "漲", "actualPct": "+1.14%", "hit": true },
-        { "date": "10/23", "pred": "漲 71%", "predPct": "+1.34%", "actual": "漲", "actualPct": "+1.51%", "hit": true },
-        { "date": "10/24", "pred": "跌 65%", "predPct": "-0.94%", "actual": "跌", "actualPct": "-1.06%", "hit": true },
-        { "date": "10/25", "pred": "漲 63%", "predPct": "+0.82%", "actual": "漲", "actualPct": "+0.99%", "hit": true },
-        { "date": "10/28", "pred": "跌 57%", "predPct": "-0.44%", "actual": "跌", "actualPct": "-0.58%", "hit": true },
-        { "date": "10/29", "pred": "跌 67%", "predPct": "-1.08%", "actual": "跌", "actualPct": "-1.19%", "hit": true },
-        { "date": "10/30", "pred": "漲 58%", "predPct": "+0.51%", "actual": "漲", "actualPct": "+0.69%", "hit": true },
-        { "date": "10/31", "pred": "漲 65%", "predPct": "+0.95%", "actual": "漲", "actualPct": "+1.12%", "hit": true },
-        { "date": "11/01", "pred": "漲 56%", "predPct": "+0.39%", "actual": "漲", "actualPct": "+0.54%", "hit": true },
-        { "date": "11/04", "pred": "漲 52%", "predPct": "+0.12%", "actual": "跌", "actualPct": "-0.34%", "hit": false },
-        { "date": "11/05", "pred": "漲 58%", "predPct": "+0.52%", "actual": "漲", "actualPct": "+0.70%", "hit": true },
-        { "date": "11/06", "pred": "漲 69%", "predPct": "+1.20%", "actual": "漲", "actualPct": "+1.41%", "hit": true },
-        { "date": "11/07", "pred": "跌 55%", "predPct": "-0.33%", "actual": "漲", "actualPct": "+0.31%", "hit": false },
-        { "date": "11/08", "pred": "漲 60%", "predPct": "+0.64%", "actual": "漲", "actualPct": "+0.78%", "hit": true },
-        { "date": "11/11", "pred": "漲 55%", "predPct": "+0.34%", "actual": "漲", "actualPct": "+0.49%", "hit": true },
-        { "date": "11/12", "pred": "跌 63%", "predPct": "-0.83%", "actual": "跌", "actualPct": "-0.96%", "hit": true },
-        { "date": "11/13", "pred": "跌 56%", "predPct": "-0.38%", "actual": "跌", "actualPct": "-0.49%", "hit": true },
-        { "date": "11/14", "pred": "漲 65%", "predPct": "+0.94%", "actual": "漲", "actualPct": "+1.16%", "hit": true },
-        { "date": "11/15", "pred": "漲 53%", "predPct": "+0.20%", "actual": "跌", "actualPct": "-0.39%", "hit": false },
-        { "date": "11/18", "pred": "漲 70%", "predPct": "+1.26%", "actual": "漲", "actualPct": "+1.45%", "hit": true },
-        { "date": "11/19", "pred": "漲 75%", "predPct": "+1.60%", "actual": "漲", "actualPct": "+3.71%", "hit": true },
-        { "date": "11/20", "pred": "漲 64%", "predPct": "+0.89%", "actual": "漲", "actualPct": "+0.81%", "hit": true }
+        {
+          "date": "10/09",
+          "pred": "跌 55%",
+          "predPct": "-0.34%",
+          "actual": "漲",
+          "actualPct": "+0.51%",
+          "hit": false
+        },
+        {
+          "date": "10/12",
+          "pred": "漲 61%",
+          "predPct": "+0.70%",
+          "actual": "漲",
+          "actualPct": "+0.88%",
+          "hit": true
+        },
+        {
+          "date": "10/13",
+          "pred": "跌 66%",
+          "predPct": "-1.02%",
+          "actual": "跌",
+          "actualPct": "-1.21%",
+          "hit": true
+        },
+        {
+          "date": "10/14",
+          "pred": "跌 60%",
+          "predPct": "-0.64%",
+          "actual": "跌",
+          "actualPct": "-0.74%",
+          "hit": true
+        },
+        {
+          "date": "10/15",
+          "pred": "漲 57%",
+          "predPct": "+0.45%",
+          "actual": "漲",
+          "actualPct": "+0.61%",
+          "hit": true
+        },
+        {
+          "date": "10/16",
+          "pred": "跌 69%",
+          "predPct": "-1.22%",
+          "actual": "跌",
+          "actualPct": "-1.39%",
+          "hit": true
+        },
+        {
+          "date": "10/19",
+          "pred": "漲 64%",
+          "predPct": "+0.88%",
+          "actual": "漲",
+          "actualPct": "+1.08%",
+          "hit": true
+        },
+        {
+          "date": "10/21",
+          "pred": "跌 73%",
+          "predPct": "-1.48%",
+          "actual": "跌",
+          "actualPct": "-1.65%",
+          "hit": true
+        },
+        {
+          "date": "10/22",
+          "pred": "漲 65%",
+          "predPct": "+0.95%",
+          "actual": "漲",
+          "actualPct": "+1.14%",
+          "hit": true
+        },
+        {
+          "date": "10/23",
+          "pred": "漲 71%",
+          "predPct": "+1.34%",
+          "actual": "漲",
+          "actualPct": "+1.51%",
+          "hit": true
+        },
+        {
+          "date": "10/24",
+          "pred": "跌 65%",
+          "predPct": "-0.94%",
+          "actual": "跌",
+          "actualPct": "-1.06%",
+          "hit": true
+        },
+        {
+          "date": "10/25",
+          "pred": "漲 63%",
+          "predPct": "+0.82%",
+          "actual": "漲",
+          "actualPct": "+0.99%",
+          "hit": true
+        },
+        {
+          "date": "10/28",
+          "pred": "跌 57%",
+          "predPct": "-0.44%",
+          "actual": "跌",
+          "actualPct": "-0.58%",
+          "hit": true
+        },
+        {
+          "date": "10/29",
+          "pred": "跌 67%",
+          "predPct": "-1.08%",
+          "actual": "跌",
+          "actualPct": "-1.19%",
+          "hit": true
+        },
+        {
+          "date": "10/30",
+          "pred": "漲 58%",
+          "predPct": "+0.51%",
+          "actual": "漲",
+          "actualPct": "+0.69%",
+          "hit": true
+        },
+        {
+          "date": "10/31",
+          "pred": "漲 65%",
+          "predPct": "+0.95%",
+          "actual": "漲",
+          "actualPct": "+1.12%",
+          "hit": true
+        },
+        {
+          "date": "11/01",
+          "pred": "漲 56%",
+          "predPct": "+0.39%",
+          "actual": "漲",
+          "actualPct": "+0.54%",
+          "hit": true
+        },
+        {
+          "date": "11/04",
+          "pred": "漲 52%",
+          "predPct": "+0.12%",
+          "actual": "跌",
+          "actualPct": "-0.34%",
+          "hit": false
+        },
+        {
+          "date": "11/05",
+          "pred": "漲 58%",
+          "predPct": "+0.52%",
+          "actual": "漲",
+          "actualPct": "+0.70%",
+          "hit": true
+        },
+        {
+          "date": "11/06",
+          "pred": "漲 69%",
+          "predPct": "+1.20%",
+          "actual": "漲",
+          "actualPct": "+1.41%",
+          "hit": true
+        },
+        {
+          "date": "11/07",
+          "pred": "跌 55%",
+          "predPct": "-0.33%",
+          "actual": "漲",
+          "actualPct": "+0.31%",
+          "hit": false
+        },
+        {
+          "date": "11/08",
+          "pred": "漲 60%",
+          "predPct": "+0.64%",
+          "actual": "漲",
+          "actualPct": "+0.78%",
+          "hit": true
+        },
+        {
+          "date": "11/11",
+          "pred": "漲 55%",
+          "predPct": "+0.34%",
+          "actual": "漲",
+          "actualPct": "+0.49%",
+          "hit": true
+        },
+        {
+          "date": "11/12",
+          "pred": "跌 63%",
+          "predPct": "-0.83%",
+          "actual": "跌",
+          "actualPct": "-0.96%",
+          "hit": true
+        },
+        {
+          "date": "11/13",
+          "pred": "跌 56%",
+          "predPct": "-0.38%",
+          "actual": "跌",
+          "actualPct": "-0.49%",
+          "hit": true
+        },
+        {
+          "date": "11/14",
+          "pred": "漲 65%",
+          "predPct": "+0.94%",
+          "actual": "漲",
+          "actualPct": "+1.16%",
+          "hit": true
+        },
+        {
+          "date": "11/15",
+          "pred": "漲 53%",
+          "predPct": "+0.20%",
+          "actual": "跌",
+          "actualPct": "-0.39%",
+          "hit": false
+        },
+        {
+          "date": "11/18",
+          "pred": "漲 70%",
+          "predPct": "+1.26%",
+          "actual": "漲",
+          "actualPct": "+1.45%",
+          "hit": true
+        },
+        {
+          "date": "11/19",
+          "pred": "漲 75%",
+          "predPct": "+1.60%",
+          "actual": "漲",
+          "actualPct": "+3.71%",
+          "hit": true
+        },
+        {
+          "date": "11/20",
+          "pred": "漲 64%",
+          "predPct": "+0.89%",
+          "actual": "漲",
+          "actualPct": "+0.81%",
+          "hit": true
+        }
       ]
     }
   },
-  "pending_predictions": {},
-  "training_samples": {}
+  "pending_predictions": {
+    "TAIEX": {
+      "2026-11-23": {
+        "predDir": "跌",
+        "pred": "跌 63%",
+        "predPct": "-0.45%",
+        "features": [
+          39,
+          15,
+          36,
+          15
+        ]
+      }
+    },
+    "2330": {
+      "2026-11-23": {
+        "predDir": "跌",
+        "pred": "跌 61%",
+        "predPct": "-0.51%",
+        "features": [
+          39,
+          15,
+          36,
+          15
+        ]
+      }
+    },
+    "0050": {
+      "2026-11-23": {
+        "predDir": "跌",
+        "pred": "跌 69%",
+        "predPct": "-0.69%",
+        "features": [
+          39,
+          15,
+          36,
+          15
+        ]
+      }
+    },
+    "00662": {
+      "2026-11-23": {
+        "predDir": "跌",
+        "pred": "跌 63%",
+        "predPct": "-0.55%",
+        "features": [
+          23,
+          15,
+          36,
+          15
+        ]
+      }
+    },
+    "00631L": {
+      "2026-11-23": {
+        "predDir": "跌",
+        "pred": "跌 69%",
+        "predPct": "-1.38%",
+        "features": [
+          39,
+          15,
+          36,
+          15
+        ]
+      }
+    },
+    "00632R": {
+      "2026-11-23": {
+        "predDir": "漲",
+        "pred": "漲 65%",
+        "predPct": "+0.54%",
+        "features": [
+          61,
+          85,
+          64,
+          85
+        ]
+      }
+    }
+  },
+  "training_samples": {
+    "TAIEX": [
+      {
+        "date": "2026-08-05",
+        "features": [
+          73.1,
+          85,
+          63.8,
+          58.0
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-08-06",
+        "features": [
+          46.1,
+          38.8,
+          59.3,
+          56.6
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-08-07",
+        "features": [
+          46.9,
+          53.2,
+          58.0,
+          55.6
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-08-10",
+        "features": [
+          62.7,
+          67.2,
+          52.8,
+          62.2
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-08-11",
+        "features": [
+          53.4,
+          36.3,
+          56.5,
+          63.8
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-08-12",
+        "features": [
+          57.0,
+          52.3,
+          61.7,
+          67.5
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-08-13",
+        "features": [
+          58.8,
+          65.9,
+          59.7,
+          71.9
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-08-14",
+        "features": [
+          46.3,
+          56.4,
+          56.1,
+          68.5
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-08-17",
+        "features": [
+          50.8,
+          45.3,
+          53.0,
+          67.3
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-08-18",
+        "features": [
+          40.4,
+          57.1,
+          43.8,
+          61.8
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-08-19",
+        "features": [
+          39.6,
+          15.3,
+          40.5,
+          56.5
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-08-20",
+        "features": [
+          53.8,
+          41.9,
+          41.9,
+          58.4
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-08-21",
+        "features": [
+          55.2,
+          49.2,
+          49.3,
+          60.3
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-08-24",
+        "features": [
+          41.8,
+          51.8,
+          50.4,
+          55.6
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-08-25",
+        "features": [
+          57.3,
+          31.2,
+          52.1,
+          57.6
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-08-26",
+        "features": [
+          61.7,
+          62.7,
+          55.4,
+          60.9
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-08-27",
+        "features": [
+          52.5,
+          50.5,
+          60.8,
+          59.4
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-08-28",
+        "features": [
+          56.2,
+          71.8,
+          60.3,
+          61.2
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-08-31",
+        "features": [
+          46.5,
+          29.0,
+          52.6,
+          58.1
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-09-01",
+        "features": [
+          64.2,
+          50.4,
+          58.5,
+          63.7
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-09-02",
+        "features": [
+          36.6,
+          36.0,
+          48.6,
+          56.1
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-09-03",
+        "features": [
+          44.7,
+          54.8,
+          47.7,
+          52.8
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-09-04",
+        "features": [
+          62.1,
+          58.2,
+          46.6,
+          57.8
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-09-07",
+        "features": [
+          63.3,
+          67.8,
+          60.1,
+          63.5
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-09-08",
+        "features": [
+          46.3,
+          50.0,
+          60.9,
+          60.7
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-09-09",
+        "features": [
+          51.3,
+          58.6,
+          55.4,
+          60.6
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-09-10",
+        "features": [
+          45.9,
+          46.4,
+          46.7,
+          58.1
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-09-11",
+        "features": [
+          37.1,
+          32.8,
+          42.2,
+          51.4
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-09-14",
+        "features": [
+          44.4,
+          64.4,
+          38.8,
+          48.6
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-09-15",
+        "features": [
+          43.9,
+          17.0,
+          37.8,
+          45.4
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-09-16",
+        "features": [
+          55.9,
+          45.4,
+          47.1,
+          47.9
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-09-17",
+        "features": [
+          57.7,
+          55.1,
+          53.7,
+          51.1
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-09-18",
+        "features": [
+          65.4,
+          77.1,
+          64.7,
+          58.0
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-09-21",
+        "features": [
+          59.1,
+          64.9,
+          66.3,
+          61.3
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-09-22",
+        "features": [
+          51.4,
+          83.0,
+          63.1,
+          60.9
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-09-23",
+        "features": [
+          56.0,
+          63.6,
+          58.3,
+          62.9
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-09-24",
+        "features": [
+          47.8,
+          37.0,
+          52.6,
+          60.9
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-09-29",
+        "features": [
+          43.5,
+          51.0,
+          48.6,
+          56.9
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-09-30",
+        "features": [
+          55.2,
+          56.6,
+          48.2,
+          58.8
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-10-01",
+        "features": [
+          56.9,
+          50.8,
+          52.7,
+          61.7
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-10-02",
+        "features": [
+          52.0,
+          57.8,
+          57.1,
+          61.7
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-10-05",
+        "features": [
+          70.4,
+          71.6,
+          64.8,
+          70.5
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-10-06",
+        "features": [
+          51.8,
+          62.3,
+          62.2,
+          70.0
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-10-07",
+        "features": [
+          49.7,
+          51.9,
+          61.0,
+          68.7
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-10-08",
+        "features": [
+          42.1,
+          39.9,
+          46.8,
+          63.6
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-10-12",
+        "features": [
+          49.8,
+          24.1,
+          45.8,
+          62.6
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-10-13",
+        "features": [
+          34.4,
+          33.2,
+          38.2,
+          54.0
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-10-14",
+        "features": [
+          54.7,
+          48.7,
+          44.4,
+          55.3
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-10-15",
+        "features": [
+          22.8,
+          16.7,
+          31.1,
+          41.1
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-10-16",
+        "features": [
+          52.4,
+          43.0,
+          39.8,
+          41.6
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-10-19",
+        "features": [
+          45.1,
+          19.6,
+          35.2,
+          38.8
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-10-20",
+        "features": [
+          41.0,
+          65.8,
+          44.2,
+          34.4
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-10-21",
+        "features": [
+          60.3,
+          51.3,
+          48.1,
+          39.5
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-10-22",
+        "features": [
+          35.6,
+          66.3,
+          43.3,
+          33.1
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-10-27",
+        "features": [
+          51.0,
+          15,
+          48.3,
+          34.2
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-10-28",
+        "features": [
+          66.3,
+          76.2,
+          51.3,
+          42.5
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-10-29",
+        "features": [
+          38.7,
+          59.4,
+          52.8,
+          37.6
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-10-30",
+        "features": [
+          30.0,
+          33.9,
+          42.3,
+          28.9
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-11-02",
+        "features": [
+          44.8,
+          15,
+          32.0,
+          27.7
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-11-03",
+        "features": [
+          21.3,
+          27.6,
+          23.6,
+          16.1
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-11-04",
+        "features": [
+          43.4,
+          67.6,
+          30.0,
+          15.2
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-11-05",
+        "features": [
+          24.4,
+          40.1,
+          20.2,
+          15
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-11-06",
+        "features": [
+          15,
+          15,
+          16.7,
+          15
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-11-09",
+        "features": [
+          85,
+          85,
+          38.0,
+          15
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-11-10",
+        "features": [
+          70.2,
+          85,
+          60.9,
+          26.3
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-11-11",
+        "features": [
+          78.9,
+          49.4,
+          85,
+          42.1
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-11-12",
+        "features": [
+          28.9,
+          85,
+          63.7,
+          34.0
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-11-13",
+        "features": [
+          60.8,
+          41.8,
+          59.0,
+          41.4
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-11-16",
+        "features": [
+          15,
+          28.6,
+          20.9,
+          20.2
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-11-17",
+        "features": [
+          31.5,
+          15,
+          22.2,
+          15
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-11-18",
+        "features": [
+          52.1,
+          39.5,
+          18.1,
+          18.3
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-11-19",
+        "features": [
+          15,
+          54.3,
+          24.5,
+          15
+        ],
+        "y": 0
+      }
+    ],
+    "2330": [
+      {
+        "date": "2026-08-05",
+        "features": [
+          79.3,
+          85,
+          46.7,
+          56.1
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-08-06",
+        "features": [
+          36.7,
+          38.8,
+          49.2,
+          50.2
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-08-07",
+        "features": [
+          51.7,
+          53.2,
+          58.6,
+          51.4
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-08-10",
+        "features": [
+          53.4,
+          67.2,
+          45.8,
+          53.6
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-08-11",
+        "features": [
+          55.0,
+          36.3,
+          55.1,
+          56.4
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-08-12",
+        "features": [
+          56.7,
+          52.3,
+          57.6,
+          60.0
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-08-13",
+        "features": [
+          56.6,
+          65.9,
+          59.2,
+          63.7
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-08-14",
+        "features": [
+          36.9,
+          56.4,
+          50.0,
+          56.0
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-08-17",
+        "features": [
+          51.7,
+          45.3,
+          47.5,
+          56.1
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-08-18",
+        "features": [
+          43.3,
+          57.1,
+          41.0,
+          53.0
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-08-19",
+        "features": [
+          39.9,
+          15.3,
+          42.5,
+          48.3
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-08-20",
+        "features": [
+          58.5,
+          41.9,
+          45.8,
+          52.8
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-08-21",
+        "features": [
+          61.8,
+          49.2,
+          55.0,
+          58.3
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-08-24",
+        "features": [
+          38.4,
+          51.8,
+          54.3,
+          52.1
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-08-25",
+        "features": [
+          58.4,
+          31.2,
+          54.2,
+          55.3
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-08-26",
+        "features": [
+          55.0,
+          62.7,
+          50.8,
+          56.0
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-08-27",
+        "features": [
+          48.3,
+          50.5,
+          55.9,
+          53.4
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-08-28",
+        "features": [
+          53.3,
+          71.8,
+          53.3,
+          55.1
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-08-31",
+        "features": [
+          45.0,
+          29.0,
+          48.3,
+          52.3
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-09-01",
+        "features": [
+          61.6,
+          50.4,
+          55.0,
+          57.2
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-09-02",
+        "features": [
+          32.0,
+          36.0,
+          44.2,
+          48.2
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-09-03",
+        "features": [
+          51.7,
+          54.8,
+          47.5,
+          48.8
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-09-04",
+        "features": [
+          56.7,
+          58.2,
+          45.1,
+          51.8
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-09-07",
+        "features": [
+          66.6,
+          67.8,
+          62.6,
+          59.4
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-09-08",
+        "features": [
+          53.3,
+          50.0,
+          63.4,
+          60.5
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-09-09",
+        "features": [
+          48.4,
+          58.6,
+          59.1,
+          59.2
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-09-10",
+        "features": [
+          45.1,
+          46.4,
+          48.4,
+          56.6
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-09-11",
+        "features": [
+          36.9,
+          32.8,
+          40.3,
+          49.8
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-09-14",
+        "features": [
+          40.0,
+          64.4,
+          36.2,
+          45.0
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-09-15",
+        "features": [
+          51.7,
+          17.0,
+          39.4,
+          45.8
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-09-16",
+        "features": [
+          50.7,
+          45.4,
+          46.2,
+          45.8
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-09-17",
+        "features": [
+          65.1,
+          55.1,
+          58.8,
+          52.8
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-09-18",
+        "features": [
+          61.5,
+          77.1,
+          63.8,
+          58.2
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-09-21",
+        "features": [
+          56.5,
+          64.9,
+          66.8,
+          60.5
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-09-22",
+        "features": [
+          43.5,
+          83.0,
+          55.8,
+          56.7
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-09-23",
+        "features": [
+          63.0,
+          63.6,
+          56.5,
+          62.5
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-09-24",
+        "features": [
+          42.0,
+          37.0,
+          49.2,
+          57.8
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-09-29",
+        "features": [
+          50.0,
+          51.0,
+          52.4,
+          57.2
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-09-30",
+        "features": [
+          51.6,
+          56.6,
+          46.8,
+          57.4
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-10-01",
+        "features": [
+          59.7,
+          50.8,
+          55.7,
+          61.7
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-10-02",
+        "features": [
+          46.8,
+          57.8,
+          54.0,
+          59.0
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-10-05",
+        "features": [
+          74.0,
+          71.6,
+          65.3,
+          69.6
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-10-06",
+        "features": [
+          53.1,
+          62.3,
+          62.0,
+          69.7
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-10-07",
+        "features": [
+          50.0,
+          51.9,
+          63.6,
+          68.6
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-10-08",
+        "features": [
+          39.2,
+          39.9,
+          46.1,
+          62.2
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-10-12",
+        "features": [
+          46.9,
+          24.1,
+          43.0,
+          59.9
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-10-13",
+        "features": [
+          34.3,
+          33.2,
+          35.3,
+          51.4
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-10-14",
+        "features": [
+          50.0,
+          48.7,
+          40.6,
+          50.7
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-10-15",
+        "features": [
+          33.9,
+          16.7,
+          34.3,
+          42.1
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-10-16",
+        "features": [
+          43.4,
+          43.0,
+          38.8,
+          38.6
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-10-19",
+        "features": [
+          50.0,
+          19.6,
+          38.8,
+          38.3
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-10-20",
+        "features": [
+          45.0,
+          65.8,
+          44.3,
+          36.0
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-10-21",
+        "features": [
+          55.0,
+          51.3,
+          50.0,
+          38.8
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-10-22",
+        "features": [
+          38.4,
+          66.3,
+          44.2,
+          33.9
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-10-23",
+        "features": [
+          50.0,
+          15,
+          46.7,
+          34.4
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-10-27",
+        "features": [
+          55.0,
+          54.0,
+          46.7,
+          37.6
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-10-28",
+        "features": [
+          58.3,
+          76.2,
+          56.7,
+          42.1
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-10-29",
+        "features": [
+          46.7,
+          59.4,
+          55.0,
+          40.9
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-10-30",
+        "features": [
+          35.1,
+          33.9,
+          45.0,
+          34.5
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-11-02",
+        "features": [
+          36.5,
+          15,
+          34.3,
+          29.4
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-11-03",
+        "features": [
+          38.0,
+          27.6,
+          30.1,
+          25.3
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-11-04",
+        "features": [
+          37.8,
+          67.6,
+          31.4,
+          21.9
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-11-05",
+        "features": [
+          42.9,
+          40.1,
+          34.5,
+          21.3
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-11-06",
+        "features": [
+          15,
+          15,
+          22.1,
+          15
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-11-09",
+        "features": [
+          85,
+          85,
+          45.6,
+          26.4
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-11-10",
+        "features": [
+          67.9,
+          85,
+          58.0,
+          36.9
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-11-11",
+        "features": [
+          85,
+          49.4,
+          85,
+          56.4
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-11-12",
+        "features": [
+          31.6,
+          85,
+          68.8,
+          48.3
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-11-13",
+        "features": [
+          53.4,
+          41.8,
+          61.4,
+          50.8
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-11-16",
+        "features": [
+          15,
+          28.6,
+          19.9,
+          29.4
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-11-17",
+        "features": [
+          33.7,
+          15,
+          20.9,
+          23.7
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-11-18",
+        "features": [
+          51.8,
+          39.5,
+          20.2,
+          26.4
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-11-19",
+        "features": [
+          22.4,
+          54.3,
+          29.2,
+          16.0
+        ],
+        "y": 0
+      }
+    ],
+    "0050": [
+      {
+        "date": "2026-08-05",
+        "features": [
+          75.0,
+          85,
+          53.7,
+          57.8
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-08-06",
+        "features": [
+          46.1,
+          38.8,
+          55.1,
+          56.3
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-08-07",
+        "features": [
+          46.5,
+          53.2,
+          58.7,
+          54.9
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-08-10",
+        "features": [
+          60.9,
+          67.2,
+          51.7,
+          60.7
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-08-11",
+        "features": [
+          52.7,
+          36.3,
+          55.0,
+          61.9
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-08-12",
+        "features": [
+          54.6,
+          52.3,
+          59.1,
+          64.3
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-08-13",
+        "features": [
+          61.4,
+          65.9,
+          59.4,
+          70.1
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-08-14",
+        "features": [
+          47.8,
+          56.4,
+          56.9,
+          67.5
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-08-17",
+        "features": [
+          50.4,
+          45.3,
+          54.8,
+          66.1
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-08-18",
+        "features": [
+          38.4,
+          57.1,
+          43.3,
+          59.5
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-08-19",
+        "features": [
+          36.3,
+          15.3,
+          37.6,
+          52.6
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-08-20",
+        "features": [
+          55.4,
+          41.9,
+          40.0,
+          55.4
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-08-21",
+        "features": [
+          56.6,
+          49.2,
+          49.0,
+          58.1
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-08-24",
+        "features": [
+          43.5,
+          51.8,
+          52.7,
+          54.4
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-08-25",
+        "features": [
+          54.6,
+          31.2,
+          52.3,
+          55.3
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-08-26",
+        "features": [
+          61.5,
+          62.7,
+          54.8,
+          58.7
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-08-27",
+        "features": [
+          51.1,
+          50.5,
+          58.7,
+          56.8
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-08-28",
+        "features": [
+          56.8,
+          71.8,
+          59.8,
+          59.4
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-08-31",
+        "features": [
+          44.8,
+          29.0,
+          51.3,
+          55.9
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-09-01",
+        "features": [
+          66.6,
+          50.4,
+          59.1,
+          62.8
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-09-02",
+        "features": [
+          37.8,
+          36.0,
+          49.4,
+          55.9
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-09-03",
+        "features": [
+          45.5,
+          54.8,
+          49.8,
+          53.1
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-09-04",
+        "features": [
+          62.8,
+          58.2,
+          48.0,
+          58.6
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-09-07",
+        "features": [
+          64.8,
+          67.8,
+          61.6,
+          65.0
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-09-08",
+        "features": [
+          48.2,
+          50.0,
+          63.0,
+          63.1
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-09-09",
+        "features": [
+          50.0,
+          58.6,
+          56.5,
+          62.2
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-09-10",
+        "features": [
+          46.4,
+          46.4,
+          47.3,
+          59.9
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-09-11",
+        "features": [
+          39.4,
+          32.8,
+          42.9,
+          54.2
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-09-14",
+        "features": [
+          44.1,
+          64.4,
+          40.0,
+          51.1
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-09-15",
+        "features": [
+          45.1,
+          17.0,
+          39.4,
+          48.4
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-09-16",
+        "features": [
+          54.9,
+          45.4,
+          47.0,
+          50.1
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-09-17",
+        "features": [
+          58.6,
+          55.1,
+          54.3,
+          53.6
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-09-18",
+        "features": [
+          63.3,
+          77.1,
+          63.6,
+          59.4
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-09-21",
+        "features": [
+          60.9,
+          64.9,
+          66.7,
+          63.5
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-09-22",
+        "features": [
+          53.6,
+          83.0,
+          64.1,
+          63.9
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-09-23",
+        "features": [
+          54.3,
+          63.6,
+          59.5,
+          64.9
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-09-24",
+        "features": [
+          49.6,
+          37.0,
+          53.8,
+          63.5
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-09-29",
+        "features": [
+          42.2,
+          51.0,
+          48.0,
+          58.6
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-09-30",
+        "features": [
+          55.4,
+          56.6,
+          48.6,
+          60.3
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-10-01",
+        "features": [
+          56.1,
+          50.8,
+          51.8,
+          62.6
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-10-02",
+        "features": [
+          49.3,
+          57.8,
+          55.4,
+          61.1
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-10-05",
+        "features": [
+          72.3,
+          71.6,
+          63.9,
+          70.7
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-10-06",
+        "features": [
+          53.8,
+          62.3,
+          62.8,
+          71.0
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-10-07",
+        "features": [
+          46.9,
+          51.9,
+          61.5,
+          68.3
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-10-08",
+        "features": [
+          42.4,
+          39.9,
+          46.6,
+          63.3
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-10-12",
+        "features": [
+          49.0,
+          24.1,
+          44.2,
+          61.8
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-10-13",
+        "features": [
+          33.3,
+          33.2,
+          37.4,
+          52.6
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-10-14",
+        "features": [
+          54.3,
+          48.7,
+          43.2,
+          53.8
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-10-15",
+        "features": [
+          21.0,
+          16.7,
+          29.4,
+          38.8
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-10-16",
+        "features": [
+          50.7,
+          43.0,
+          37.9,
+          38.7
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-10-19",
+        "features": [
+          43.8,
+          19.6,
+          32.8,
+          35.4
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-10-20",
+        "features": [
+          43.3,
+          65.8,
+          43.9,
+          32.4
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-10-21",
+        "features": [
+          56.7,
+          51.3,
+          46.9,
+          35.9
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-10-22",
+        "features": [
+          40.8,
+          66.3,
+          45.4,
+          32.2
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-10-23",
+        "features": [
+          50.0,
+          15,
+          48.7,
+          33.0
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-10-27",
+        "features": [
+          47.8,
+          54.0,
+          44.3,
+          32.9
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-10-28",
+        "features": [
+          65.4,
+          76.2,
+          56.5,
+          41.0
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-10-29",
+        "features": [
+          39.7,
+          59.4,
+          51.3,
+          36.6
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-10-30",
+        "features": [
+          32.8,
+          33.9,
+          43.8,
+          29.6
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-11-02",
+        "features": [
+          43.5,
+          15,
+          33.2,
+          28.0
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-11-03",
+        "features": [
+          23.1,
+          27.6,
+          25.2,
+          17.3
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-11-04",
+        "features": [
+          44.0,
+          67.6,
+          30.6,
+          17.3
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-11-05",
+        "features": [
+          28.4,
+          40.1,
+          23.3,
+          15
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-11-06",
+        "features": [
+          15,
+          15,
+          17.8,
+          15
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-11-09",
+        "features": [
+          85,
+          85,
+          40.4,
+          18.7
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-11-10",
+        "features": [
+          68.5,
+          85,
+          60.5,
+          29.9
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-11-11",
+        "features": [
+          78.1,
+          49.4,
+          85,
+          45.0
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-11-12",
+        "features": [
+          32.6,
+          85,
+          64.4,
+          38.6
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-11-13",
+        "features": [
+          62.3,
+          41.8,
+          61.2,
+          45.8
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-11-16",
+        "features": [
+          15,
+          28.6,
+          23.8,
+          24.7
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-11-17",
+        "features": [
+          29.7,
+          15,
+          22.5,
+          17.7
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-11-18",
+        "features": [
+          50.9,
+          39.5,
+          17.2,
+          20.5
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-11-19",
+        "features": [
+          16.8,
+          54.3,
+          24.1,
+          15
+        ],
+        "y": 0
+      }
+    ],
+    "00662": [
+      {
+        "date": "2026-08-05",
+        "features": [
+          71.6,
+          85,
+          67.0,
+          63.5
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-08-06",
+        "features": [
+          39.6,
+          38.8,
+          61.1,
+          57.9
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-08-07",
+        "features": [
+          48.7,
+          53.2,
+          54.8,
+          57.0
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-08-10",
+        "features": [
+          59.2,
+          67.2,
+          48.7,
+          61.4
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-08-11",
+        "features": [
+          48.4,
+          36.3,
+          53.1,
+          60.3
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-08-12",
+        "features": [
+          45.8,
+          52.3,
+          51.6,
+          58.2
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-08-13",
+        "features": [
+          54.3,
+          65.9,
+          49.2,
+          60.3
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-08-14",
+        "features": [
+          52.3,
+          56.4,
+          51.1,
+          60.7
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-08-17",
+        "features": [
+          50.0,
+          45.3,
+          53.3,
+          60.0
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-08-18",
+        "features": [
+          39.9,
+          57.1,
+          46.1,
+          54.6
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-08-19",
+        "features": [
+          40.1,
+          15.3,
+          40.1,
+          49.7
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-08-20",
+        "features": [
+          55.0,
+          41.9,
+          42.5,
+          52.0
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-08-21",
+        "features": [
+          42.7,
+          49.2,
+          43.9,
+          48.1
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-08-24",
+        "features": [
+          46.0,
+          51.8,
+          46.8,
+          46.0
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-08-25",
+        "features": [
+          50.7,
+          31.2,
+          44.7,
+          45.7
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-08-26",
+        "features": [
+          50.0,
+          62.7,
+          48.3,
+          45.1
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-08-27",
+        "features": [
+          53.0,
+          50.5,
+          51.8,
+          45.6
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-08-28",
+        "features": [
+          51.3,
+          71.8,
+          52.2,
+          46.0
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-08-31",
+        "features": [
+          47.7,
+          29.0,
+          51.0,
+          44.7
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-09-01",
+        "features": [
+          48.7,
+          50.4,
+          48.8,
+          44.1
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-09-02",
+        "features": [
+          42.6,
+          36.0,
+          44.5,
+          41.4
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-09-03",
+        "features": [
+          50.3,
+          54.8,
+          45.8,
+          42.1
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-09-04",
+        "features": [
+          64.2,
+          58.2,
+          53.5,
+          49.3
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-09-07",
+        "features": [
+          47.0,
+          67.8,
+          55.7,
+          48.3
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-09-08",
+        "features": [
+          49.3,
+          50.0,
+          55.2,
+          48.4
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-09-09",
+        "features": [
+          46.3,
+          58.6,
+          46.4,
+          47.1
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-09-10",
+        "features": [
+          48.3,
+          46.4,
+          47.0,
+          46.9
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-09-11",
+        "features": [
+          44.6,
+          32.8,
+          44.7,
+          45.0
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-09-14",
+        "features": [
+          48.3,
+          64.4,
+          45.6,
+          45.0
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-09-15",
+        "features": [
+          52.7,
+          17.0,
+          47.8,
+          46.9
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-09-16",
+        "features": [
+          49.0,
+          45.4,
+          50.0,
+          46.7
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-09-17",
+        "features": [
+          55.4,
+          55.1,
+          53.6,
+          49.7
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-09-18",
+        "features": [
+          58.7,
+          77.1,
+          56.6,
+          53.9
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-09-21",
+        "features": [
+          57.3,
+          64.9,
+          60.8,
+          57.2
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-09-22",
+        "features": [
+          66.1,
+          83.0,
+          66.3,
+          64.6
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-09-23",
+        "features": [
+          56.1,
+          63.6,
+          64.9,
+          66.8
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-09-24",
+        "features": [
+          45.2,
+          37.0,
+          58.7,
+          63.6
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-09-29",
+        "features": [
+          43.6,
+          51.0,
+          47.4,
+          59.7
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-09-30",
+        "features": [
+          56.2,
+          56.6,
+          47.4,
+          62.1
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-10-01",
+        "features": [
+          62.9,
+          50.8,
+          56.3,
+          67.6
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-10-02",
+        "features": [
+          46.2,
+          57.8,
+          57.6,
+          64.3
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-10-05",
+        "features": [
+          51.3,
+          71.6,
+          55.2,
+          63.7
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-10-06",
+        "features": [
+          57.6,
+          62.3,
+          52.5,
+          66.6
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-10-07",
+        "features": [
+          52.2,
+          51.9,
+          55.6,
+          66.5
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-10-08",
+        "features": [
+          49.7,
+          39.9,
+          54.8,
+          65.1
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-10-12",
+        "features": [
+          49.1,
+          24.1,
+          50.5,
+          63.3
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-10-13",
+        "features": [
+          40.2,
+          33.2,
+          44.5,
+          57.2
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-10-14",
+        "features": [
+          56.1,
+          48.7,
+          47.6,
+          58.9
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-10-15",
+        "features": [
+          29.1,
+          16.7,
+          37.7,
+          47.5
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-10-16",
+        "features": [
+          61.0,
+          43.0,
+          47.9,
+          51.9
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-10-19",
+        "features": [
+          40.1,
+          19.6,
+          40.0,
+          46.1
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-10-20",
+        "features": [
+          48.7,
+          65.8,
+          49.8,
+          44.8
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-10-21",
+        "features": [
+          53.9,
+          51.3,
+          46.3,
+          46.2
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-10-22",
+        "features": [
+          44.2,
+          66.3,
+          48.4,
+          43.2
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-10-23",
+        "features": [
+          50.0,
+          15,
+          49.0,
+          43.3
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-10-27",
+        "features": [
+          44.5,
+          54.0,
+          44.3,
+          41.1
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-10-28",
+        "features": [
+          63.4,
+          76.2,
+          53.9,
+          47.7
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-10-29",
+        "features": [
+          46.8,
+          59.4,
+          52.3,
+          46.0
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-10-30",
+        "features": [
+          32.2,
+          33.9,
+          46.1,
+          37.7
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-11-02",
+        "features": [
+          44.0,
+          15,
+          36.6,
+          35.8
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-11-03",
+        "features": [
+          35.0,
+          27.6,
+          30.9,
+          29.8
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-11-04",
+        "features": [
+          52.0,
+          67.6,
+          40.6,
+          31.9
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-11-05",
+        "features": [
+          55.1,
+          40.1,
+          46.0,
+          35.7
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-11-06",
+        "features": [
+          15,
+          15,
+          35.2,
+          20.2
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-11-09",
+        "features": [
+          15,
+          85,
+          15,
+          15
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-11-10",
+        "features": [
+          73.8,
+          85,
+          15,
+          15
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-11-11",
+        "features": [
+          50.0,
+          49.4,
+          15,
+          15
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-11-12",
+        "features": [
+          50.0,
+          85,
+          61.9,
+          15
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-11-13",
+        "features": [
+          50.0,
+          41.8,
+          50.0,
+          15
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-11-16",
+        "features": [
+          50.0,
+          28.6,
+          50.0,
+          15
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-11-17",
+        "features": [
+          34.4,
+          15,
+          42.2,
+          15
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-11-18",
+        "features": [
+          45.8,
+          39.5,
+          40.2,
+          15
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-11-19",
+        "features": [
+          55.2,
+          54.3,
+          42.7,
+          15
+        ],
+        "y": 0
+      }
+    ],
+    "00631L": [
+      {
+        "date": "2026-08-05",
+        "features": [
+          85,
+          85,
+          55.3,
+          53.8
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-08-06",
+        "features": [
+          43.0,
+          38.8,
+          65.1,
+          52.3
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-08-07",
+        "features": [
+          46.0,
+          53.2,
+          69.0,
+          52.1
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-08-10",
+        "features": [
+          74.2,
+          67.2,
+          56.4,
+          65.6
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-08-11",
+        "features": [
+          53.9,
+          36.3,
+          62.1,
+          68.3
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-08-12",
+        "features": [
+          63.3,
+          52.3,
+          71.0,
+          76.2
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-08-13",
+        "features": [
+          69.0,
+          65.9,
+          68.3,
+          85
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-08-14",
+        "features": [
+          36.8,
+          56.4,
+          59.4,
+          77.4
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-08-17",
+        "features": [
+          55.8,
+          45.3,
+          55.6,
+          78.1
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-08-18",
+        "features": [
+          24.6,
+          57.1,
+          33.7,
+          64.2
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-08-19",
+        "features": [
+          30.5,
+          15.3,
+          30.6,
+          54.6
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-08-20",
+        "features": [
+          57.3,
+          41.9,
+          31.3,
+          58.8
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-08-21",
+        "features": [
+          63.3,
+          49.2,
+          50.3,
+          64.7
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-08-24",
+        "features": [
+          33.2,
+          51.8,
+          51.8,
+          55.7
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-08-25",
+        "features": [
+          63.4,
+          31.2,
+          54.8,
+          60.0
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-08-26",
+        "features": [
+          73.8,
+          62.7,
+          60.0,
+          67.7
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-08-27",
+        "features": [
+          55.4,
+          50.5,
+          71.6,
+          65.9
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-08-28",
+        "features": [
+          57.8,
+          71.8,
+          68.7,
+          68.4
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-08-31",
+        "features": [
+          39.4,
+          29.0,
+          51.2,
+          61.0
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-09-01",
+        "features": [
+          82.2,
+          50.4,
+          64.6,
+          74.4
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-09-02",
+        "features": [
+          21.4,
+          36.0,
+          45.9,
+          58.2
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-09-03",
+        "features": [
+          38.4,
+          54.8,
+          45.4,
+          51.4
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-09-04",
+        "features": [
+          77.8,
+          58.2,
+          43.3,
+          63.6
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-09-07",
+        "features": [
+          76.2,
+          67.8,
+          71.3,
+          75.3
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-09-08",
+        "features": [
+          42.6,
+          50.0,
+          73.5,
+          69.8
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-09-09",
+        "features": [
+          51.1,
+          58.6,
+          59.8,
+          69.2
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-09-10",
+        "features": [
+          41.7,
+          46.4,
+          42.7,
+          64.3
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-09-11",
+        "features": [
+          24.8,
+          32.8,
+          33.9,
+          51.1
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-09-14",
+        "features": [
+          37.1,
+          64.4,
+          27.2,
+          44.9
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-09-15",
+        "features": [
+          43.0,
+          17.0,
+          27.8,
+          41.3
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-09-16",
+        "features": [
+          60.7,
+          45.4,
+          45.3,
+          45.7
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-09-17",
+        "features": [
+          69.1,
+          55.1,
+          61.4,
+          53.9
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-09-18",
+        "features": [
+          77.2,
+          77.1,
+          79.2,
+          66.1
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-09-21",
+        "features": [
+          67.0,
+          64.9,
+          82.5,
+          72.4
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-09-22",
+        "features": [
+          51.5,
+          83.0,
+          73.2,
+          70.9
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-09-23",
+        "features": [
+          59.8,
+          63.6,
+          64.2,
+          74.2
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-09-24",
+        "features": [
+          47.5,
+          37.0,
+          54.4,
+          71.2
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-09-29",
+        "features": [
+          37.9,
+          51.0,
+          47.5,
+          63.7
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-09-30",
+        "features": [
+          64.8,
+          56.6,
+          50.0,
+          69.6
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-10-01",
+        "features": [
+          62.9,
+          50.8,
+          57.7,
+          75.0
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-10-02",
+        "features": [
+          49.2,
+          57.8,
+          63.6,
+          72.5
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-10-05",
+        "features": [
+          85,
+          71.6,
+          76.2,
+          85
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-10-06",
+        "features": [
+          56.7,
+          62.3,
+          72.9,
+          85
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-10-07",
+        "features": [
+          47.3,
+          51.9,
+          71.9,
+          85
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-10-08",
+        "features": [
+          33.7,
+          39.9,
+          43.8,
+          76.0
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-10-12",
+        "features": [
+          49.8,
+          24.1,
+          40.5,
+          74.0
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-10-13",
+        "features": [
+          18.9,
+          33.2,
+          26.5,
+          56.4
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-10-14",
+        "features": [
+          59.8,
+          48.7,
+          39.0,
+          59.3
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-10-15",
+        "features": [
+          15,
+          16.7,
+          15,
+          31.3
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-10-16",
+        "features": [
+          50.2,
+          43.0,
+          28.1,
+          30.4
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-10-19",
+        "features": [
+          36.2,
+          19.6,
+          17.1,
+          23.4
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-10-20",
+        "features": [
+          36.0,
+          65.8,
+          36.3,
+          17.1
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-10-21",
+        "features": [
+          66.5,
+          51.3,
+          44.2,
+          25.2
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-10-22",
+        "features": [
+          28.1,
+          66.3,
+          40.1,
+          16.3
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-10-23",
+        "features": [
+          50.0,
+          15,
+          47.1,
+          17.6
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-10-27",
+        "features": [
+          49.8,
+          54.0,
+          39.0,
+          19.2
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-10-28",
+        "features": [
+          78.8,
+          76.2,
+          64.3,
+          33.4
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-10-29",
+        "features": [
+          28.5,
+          59.4,
+          53.1,
+          24.3
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-10-30",
+        "features": [
+          15,
+          33.9,
+          33.8,
+          15
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-11-02",
+        "features": [
+          42.3,
+          15,
+          16.9,
+          15
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-11-03",
+        "features": [
+          15,
+          27.6,
+          15,
+          15
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-11-04",
+        "features": [
+          34.0,
+          67.6,
+          15,
+          15
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-11-05",
+        "features": [
+          15,
+          40.1,
+          15,
+          15
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-11-06",
+        "features": [
+          15,
+          15,
+          15,
+          15
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-11-09",
+        "features": [
+          85,
+          85,
+          24.7,
+          15
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-11-10",
+        "features": [
+          85,
+          85,
+          64.2,
+          15
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-11-11",
+        "features": [
+          85,
+          49.4,
+          85,
+          32.6
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-11-12",
+        "features": [
+          15,
+          85,
+          78.9,
+          19.3
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-11-13",
+        "features": [
+          74.0,
+          41.8,
+          72.1,
+          33.3
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-11-16",
+        "features": [
+          15,
+          28.6,
+          15,
+          15
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-11-17",
+        "features": [
+          18.8,
+          15,
+          15,
+          15
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-11-18",
+        "features": [
+          49.4,
+          39.5,
+          15,
+          15
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-11-19",
+        "features": [
+          15,
+          54.3,
+          15,
+          15
+        ],
+        "y": 0
+      }
+    ],
+    "00632R": [
+      {
+        "date": "2026-08-05",
+        "features": [
+          74.8,
+          15,
+          55.4,
+          40.0
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-08-06",
+        "features": [
+          47.7,
+          61.2,
+          60.2,
+          40.8
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-08-07",
+        "features": [
+          48.5,
+          46.8,
+          60.5,
+          41.3
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-08-10",
+        "features": [
+          63.9,
+          32.8,
+          55.0,
+          34.6
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-08-11",
+        "features": [
+          50.8,
+          63.7,
+          56.6,
+          34.6
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-08-12",
+        "features": [
+          57.9,
+          47.7,
+          61.2,
+          31.0
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-08-13",
+        "features": [
+          58.7,
+          34.1,
+          58.7,
+          27.1
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-08-14",
+        "features": [
+          45.2,
+          43.6,
+          55.9,
+          30.9
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-08-17",
+        "features": [
+          53.2,
+          54.7,
+          53.6,
+          31.0
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-08-18",
+        "features": [
+          37.2,
+          42.9,
+          42.8,
+          37.8
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-08-19",
+        "features": [
+          39.7,
+          84.7,
+          40.0,
+          43.0
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-08-20",
+        "features": [
+          53.1,
+          58.1,
+          40.0,
+          41.7
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-08-21",
+        "features": [
+          55.5,
+          50.8,
+          49.2,
+          39.8
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-08-24",
+        "features": [
+          43.7,
+          48.2,
+          51.2,
+          43.5
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-08-25",
+        "features": [
+          55.5,
+          68.8,
+          52.3,
+          42.6
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-08-26",
+        "features": [
+          63.4,
+          37.3,
+          56.3,
+          38.7
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-08-27",
+        "features": [
+          53.2,
+          49.5,
+          60.9,
+          40.1
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-08-28",
+        "features": [
+          54.8,
+          28.2,
+          60.6,
+          38.8
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-08-31",
+        "features": [
+          45.1,
+          71.0,
+          51.6,
+          42.4
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-09-01",
+        "features": [
+          67.7,
+          49.6,
+          58.8,
+          35.4
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-09-02",
+        "features": [
+          35.2,
+          64.0,
+          49.2,
+          43.3
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-09-03",
+        "features": [
+          42.7,
+          45.2,
+          48.0,
+          47.5
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-09-04",
+        "features": [
+          65.2,
+          41.8,
+          46.7,
+          41.0
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-09-07",
+        "features": [
+          63.9,
+          32.2,
+          60.9,
+          35.3
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-09-08",
+        "features": [
+          45.0,
+          50.0,
+          62.0,
+          38.6
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-09-09",
+        "features": [
+          50.0,
+          41.4,
+          54.5,
+          39.3
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-09-10",
+        "features": [
+          47.5,
+          53.6,
+          46.3,
+          40.9
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-09-11",
+        "features": [
+          35.2,
+          67.2,
+          41.3,
+          48.3
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-09-14",
+        "features": [
+          45.2,
+          35.6,
+          38.9,
+          50.7
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-09-15",
+        "features": [
+          45.2,
+          83.0,
+          37.7,
+          53.4
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-09-16",
+        "features": [
+          56.4,
+          54.6,
+          48.4,
+          50.8
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-09-17",
+        "features": [
+          58.8,
+          44.9,
+          55.2,
+          47.1
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-09-18",
+        "features": [
+          63.8,
+          22.9,
+          64.4,
+          41.2
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-09-21",
+        "features": [
+          59.9,
+          35.1,
+          66.1,
+          37.7
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-09-22",
+        "features": [
+          52.5,
+          17.0,
+          63.0,
+          37.7
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-09-23",
+        "features": [
+          52.5,
+          36.4,
+          57.4,
+          37.5
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-09-24",
+        "features": [
+          50.0,
+          63.0,
+          52.5,
+          38.4
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-09-29",
+        "features": [
+          43.3,
+          49.0,
+          47.9,
+          42.3
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-09-30",
+        "features": [
+          58.4,
+          43.4,
+          50.8,
+          39.2
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-10-01",
+        "features": [
+          55.1,
+          49.2,
+          53.4,
+          37.3
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-10-02",
+        "features": [
+          50.9,
+          42.2,
+          57.1,
+          37.9
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-10-05",
+        "features": [
+          70.4,
+          28.4,
+          63.1,
+          29.7
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-10-06",
+        "features": [
+          52.6,
+          37.7,
+          61.9,
+          29.8
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-10-07",
+        "features": [
+          49.1,
+          48.1,
+          61.1,
+          31.2
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-10-08",
+        "features": [
+          41.2,
+          60.1,
+          46.5,
+          36.3
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-10-12",
+        "features": [
+          50.9,
+          75.9,
+          45.6,
+          36.8
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-10-13",
+        "features": [
+          34.4,
+          66.8,
+          38.2,
+          45.0
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-10-14",
+        "features": [
+          54.3,
+          51.3,
+          44.8,
+          44.0
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-10-15",
+        "features": [
+          22.6,
+          83.3,
+          30.5,
+          58.1
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-10-16",
+        "features": [
+          52.5,
+          57.0,
+          39.8,
+          57.7
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-10-19",
+        "features": [
+          41.7,
+          80.4,
+          33.3,
+          62.3
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-10-20",
+        "features": [
+          41.0,
+          34.2,
+          42.6,
+          67.0
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-10-21",
+        "features": [
+          61.4,
+          48.7,
+          47.1,
+          60.9
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-10-22",
+        "features": [
+          36.8,
+          33.7,
+          44.7,
+          67.0
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-10-23",
+        "features": [
+          50.0,
+          85,
+          49.2,
+          66.2
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-10-27",
+        "features": [
+          50.8,
+          46.0,
+          43.8,
+          64.9
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-10-28",
+        "features": [
+          66.2,
+          23.8,
+          58.5,
+          56.1
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-10-29",
+        "features": [
+          35.1,
+          40.6,
+          51.2,
+          63.1
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-10-30",
+        "features": [
+          31.3,
+          66.1,
+          41.5,
+          71.4
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-11-02",
+        "features": [
+          47.6,
+          85,
+          31.8,
+          71.1
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-11-03",
+        "features": [
+          17.6,
+          72.4,
+          22.8,
+          85
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-11-04",
+        "features": [
+          45.4,
+          32.4,
+          30.2,
+          84.9
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-11-05",
+        "features": [
+          24.3,
+          59.9,
+          18.0,
+          85
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-11-06",
+        "features": [
+          15,
+          85,
+          15,
+          85
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-11-09",
+        "features": [
+          85,
+          15,
+          37.5,
+          85
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-11-10",
+        "features": [
+          69.1,
+          15,
+          59.9,
+          72.2
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-11-11",
+        "features": [
+          79.3,
+          50.6,
+          85,
+          55.0
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-11-12",
+        "features": [
+          29.7,
+          15,
+          64.3,
+          62.9
+        ],
+        "y": 0
+      },
+      {
+        "date": "2026-11-13",
+        "features": [
+          66.0,
+          58.2,
+          62.8,
+          53.4
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-11-16",
+        "features": [
+          15,
+          71.4,
+          21.5,
+          77.2
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-11-17",
+        "features": [
+          35.4,
+          85,
+          24.5,
+          82.0
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-11-18",
+        "features": [
+          50.0,
+          60.5,
+          15.9,
+          79.2
+        ],
+        "y": 1
+      },
+      {
+        "date": "2026-11-19",
+        "features": [
+          15,
+          45.7,
+          24.9,
+          85
+        ],
+        "y": 1
+      }
+    ]
+  }
 }
