@@ -1,7 +1,7 @@
 {
   "name": "台股 AI 明日漲跌情報站",
   "short_name": "台股AI預測",
-  "description": "串接真實外資籌碼、那斯達克與技術指標的台股明日漲跌機率與幅度預測 App",
+  "description": "串接費半、TSM ADR、外資籌碼並透過機器學習自動訓練權重的台股預測 App",
   "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#090d16",

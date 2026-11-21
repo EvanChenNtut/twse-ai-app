@@ -318,7 +318,7 @@
       const [newsList, setNewsList] = useState([]);
       const [newsFilter, setNewsFilter] = useState('全部');
       const [isSyncing, setIsSyncing] = useState(false);
-      const [lastSyncTime, setLastSyncTime] = useState('載入雲端數據中...');
+      const [lastSyncTime, setLastSyncTime] = useState('載入雲端 ML 模型中...');
       const [customHeadlines, setCustomHeadlines] = useState([]);
       const [inputHeadline, setInputHeadline] = useState('');
       const [inputImpact, setInputImpact] = useState(8);
@@ -327,7 +327,6 @@
       const todayDate = useMemo(() => new Date(), []);
       const targetPredDate = useMemo(() => getTargetTradingDate(todayDate), [todayDate]);
 
-      // 從 GitHub Actions 自動更新的 ./market_data.json 載入真實股價、籌碼與 30 日回測
       const loadCloudMarketData = async () => {
         setIsSyncing(true);
         try {
@@ -346,11 +345,10 @@
         }
       };
 
-      // 點擊「更新情報」時，除了重抓 market_data.json，也即時補抓最新 Google News RSS
       const handleManualRefresh = async () => {
         await loadCloudMarketData();
         try {
-          const rssUrl = encodeURIComponent('https://news.google.com/rss/search?q=台股+OR+外資+OR+台積電+OR+那斯達克&hl=zh-TW&gl=TW&ceid=TW:zh-Hant');
+          const rssUrl = encodeURIComponent('https://news.google.com/rss/search?q=台股+OR+外資+OR+台積電+OR+費半+OR+那斯達克&hl=zh-TW&gl=TW&ceid=TW:zh-Hant');
           const res = await fetch(`https://api.rss2json.com/v1/api.json?rss_url=${rssUrl}`);
           const data = await res.json();
           if (data.status === 'ok' && data.items && data.items.length > 0) {
@@ -371,7 +369,7 @@
             });
             setNewsList(parsed);
             const now = new Date();
-            setLastSyncTime(`${now.getHours().toString().padStart(2, '0')}:${now.getMinutes().toString().padStart(2, '0')} 已同步即時新聞與雲端數據`);
+            setLastSyncTime(`${now.getHours().toString().padStart(2, '0')}:${now.getMinutes().toString().padStart(2, '0')} 已同步即時新聞與 ML 模型`);
           }
         } catch (e) {}
       };
@@ -388,7 +386,6 @@
       const availableCodes = ORDERED_CODES.filter(c => stocksMap[c]);
       const currentStock = stocksMap[selectedCode] || stocksMap[availableCodes[0]];
 
-      // 動態計算明日看漲/看跌機率與預估漲跌幅度
       const { bullProb, bearProb, predictedMovePct } = useMemo(() => {
         if (!currentStock) return { bullProb: 50, bearProb: 50, predictedMovePct: 0 };
         const isInverse = (currentStock.leverage || 1) < 0;
@@ -438,7 +435,7 @@
       if (!currentStock) {
         return (
           <div className="min-h-screen bg-[#090d16] text-slate-200 flex items-center justify-center text-sm">
-            正在同步台股與美股即時資料庫...
+            正在同步台股與美股 ML 資料庫...
           </div>
         );
       }
@@ -498,7 +495,7 @@
               </div>
             )}
 
-            {/* 標的快速切換列 (加權指數、台積電 2330、0050、富邦NASDAQ 00662、0050正2 00631L、0050反1 00632R) */}
+            {/* 標的快速切換列 */}
             <div className="flex gap-2 overflow-x-auto no-scrollbar pt-2.5 pb-1">
               {availableCodes.map((code) => {
                 const st = stocksMap[code];
@@ -589,7 +586,7 @@
               <div className="mt-2.5 bg-slate-950/85 border border-slate-800 rounded-xl px-3.5 py-2.5 flex items-center justify-between">
                 <div className="flex flex-col">
                   <span className="text-[11px] text-slate-400">AI 預估 {formatShortDate(targetPredDate)} 漲跌幅度</span>
-                  <span className="text-[10px] text-slate-500">依真實波動率與多空因子加權計算</span>
+                  <span className="text-[10px] text-indigo-300/90">{currentStock.mlStatus || 'ML 動態權重推估'}</span>
                 </div>
                 <div className={`text-lg font-black tracking-tight px-2.5 py-0.5 rounded-lg ${
                   predictedMovePct >= 0
@@ -619,12 +616,17 @@
               </div>
             </section>
 
-            {/* Tab 1: AI 因子權重與完整近 30 個交易日回測 */}
+            {/* Tab 1: ML 自動訓練權重因子與近 30 個交易日回測 */}
             {activeTab === 'dashboard' && (
               <>
                 <section className="bg-slate-900/70 border border-slate-800/80 rounded-2xl p-4 space-y-3">
                   <div className="flex items-center justify-between">
-                    <h3 className="text-sm font-bold text-slate-200">AI 多維度評估因子</h3>
+                    <div className="flex items-center gap-1.5">
+                      <h3 className="text-sm font-bold text-slate-200">AI 多維度評估因子</h3>
+                      <span className="text-[10px] px-1.5 py-0.5 rounded bg-purple-500/20 text-purple-300 border border-purple-500/30 font-semibold">
+                        ML 自動調權
+                      </span>
+                    </div>
                     <span className="text-[11px] text-slate-400">滿分 100 偏多</span>
                   </div>
                   <div className="space-y-3">
@@ -632,7 +634,7 @@
                       <div key={idx} className="space-y-1">
                         <div className="flex justify-between text-xs">
                           <span className="font-semibold text-slate-200">
-                            {f.name} <span className="text-slate-500 font-normal">({f.weight})</span>
+                            {f.name} <span className="text-purple-300/90 font-medium">(權重 {f.weight})</span>
                           </span>
                           <span className={`font-bold ${f.score >= 50 ? 'text-rose-400' : 'text-emerald-400'}`}>
                             {f.score} 分
@@ -789,11 +791,11 @@
 
                 <div className="grid grid-cols-2 gap-2">
                   <button
-                    onClick={() => addCustomEvent('那斯達克指數強彈大漲 3%', +16)}
+                    onClick={() => addCustomEvent('費城半導體與 TSM ADR 大漲 4%', +16)}
                     className="p-2.5 rounded-xl bg-rose-950/40 border border-rose-500/30 text-left hover:bg-rose-950/60 transition"
                   >
                     <div className="text-xs font-bold text-rose-400">+16% 美股利多</div>
-                    <div className="text-[11px] text-slate-300 mt-0.5">那斯達克強彈 3%</div>
+                    <div className="text-[11px] text-slate-300 mt-0.5">費半與 ADR 大漲 4%</div>
                   </button>
                   <button
                     onClick={() => addCustomEvent('外資現貨大幅買超 300 億', +15)}
@@ -810,11 +812,11 @@
                     <div className="text-[11px] text-slate-300 mt-0.5">外資空單創高</div>
                   </button>
                   <button
-                    onClick={() => addCustomEvent('美股科技股重挫費半跌 4%', -16)}
+                    onClick={() => addCustomEvent('費半重挫 4% 且 TSM ADR 跌 3%', -16)}
                     className="p-2.5 rounded-xl bg-emerald-950/40 border border-emerald-500/30 text-left hover:bg-emerald-950/60 transition"
                   >
                     <div className="text-xs font-bold text-emerald-400">-16% 國際利空</div>
-                    <div className="text-[11px] text-slate-300 mt-0.5">美股費半重挫 4%</div>
+                    <div className="text-[11px] text-slate-300 mt-0.5">費半與 ADR 重挫</div>
                   </button>
                 </div>
 

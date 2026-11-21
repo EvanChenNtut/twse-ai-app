@@ -1,4 +1,4 @@
-const CACHE_NAME = 'twse-ai-predictor-v4';
+const CACHE_NAME = 'twse-ai-predictor-v5';
 const ASSETS = [
   './',
   './index.html',
@@ -27,7 +27,6 @@ self.addEventListener('activate', (event) => {
 
 self.addEventListener('fetch', (event) => {
   if (event.request.method !== 'GET') return;
-  // Always fetch fresh market_data.json from network first
   if (event.request.url.includes('market_data.json')) {
     event.respondWith(
       fetch(event.request).catch(() => caches.match(event.request))

@@ -1,27 +1,31 @@
 {
-  "updatedAt": "2026/11/21 21:00",
+  "updatedAt": "2026/11/21 21:35",
   "todayDate": "2026-11-21",
   "targetDate": "2026-11-23",
   "foreignNetBillion": -118.4,
-  "nasdaqPct": 0.65,
+  "usTechPct": {
+    "IXIC": 0.65,
+    "SOX": 1.12,
+    "TSM": 1.45
+  },
   "news": [
     {
       "id": "news-1",
+      "source": "美股科技追蹤",
+      "category": "國際",
+      "time": "今日更新",
+      "title": "費城半導體指數反彈 1.12%、台積電 ADR 上漲 1.45%，帶動電子權值止穩",
+      "sentiment": "bull",
+      "impact": 6
+    },
+    {
+      "id": "news-2",
       "source": "盤後籌碼速報",
       "category": "籌碼",
       "time": "今日更新",
       "title": "台股守穩 38,100 關卡，外資賣超幅度大幅縮小至百億附近",
       "sentiment": "neutral",
       "impact": 1
-    },
-    {
-      "id": "news-2",
-      "source": "美股科技追蹤",
-      "category": "國際",
-      "time": "今日更新",
-      "title": "那斯達克指數止穩反彈 0.65%，大型科技股與半導體買盤回溫",
-      "sentiment": "bull",
-      "impact": 5
     },
     {
       "id": "news-3",
@@ -43,11 +47,13 @@
       "change": "-314.49",
       "changePct": "-0.82%",
       "isUp": false,
-      "baseBullProb": 42,
+      "baseBullProb": 47,
+      "mlStatus": "ML 自動訓練完成 (60 日樣本)",
+      "learnedWeights": { "foreign": 34, "usTech": 33, "news": 18, "tech": 15 },
       "factors": [
-        { "name": "外資與法人資金動能", "score": 32, "weight": "35%", "desc": "外資賣超幅度較昨日收斂，期貨空單小幅回補" },
-        { "name": "美股那斯達克連動", "score": 56, "weight": "30%", "desc": "美股那斯達克止穩反彈 +0.65%，有利電子權值回穩" },
-        { "name": "網路新聞與社群情緒", "score": 41, "weight": "20%", "desc": "市場恐慌情緒降溫，低接買盤開始進場" },
+        { "name": "外資與法人資金動能", "score": 32, "weight": "34%", "desc": "外資賣超幅度較昨日收斂，期貨空單小幅回補" },
+        { "name": "美股科技綜合連動 (那指/費半/TSM)", "score": 61, "weight": "33%", "desc": "那指 +0.65% / 費半 +1.12% / TSM ADR +1.45%" },
+        { "name": "網路新聞與社群情緒", "score": 45, "weight": "18%", "desc": "費半與 ADR 走強舒緩短線恐慌情緒" },
         { "name": "技術面均線乖離率", "score": 48, "weight": "15%", "desc": "回測 38,000 點整數關卡留下影線支撐" }
       ],
       "history": [
@@ -92,11 +98,13 @@
       "change": "-15.00",
       "changePct": "-0.71%",
       "isUp": false,
-      "baseBullProb": 46,
+      "baseBullProb": 51,
+      "mlStatus": "ML 自動訓練完成 (60 日樣本)",
+      "learnedWeights": { "foreign": 31, "usTech": 37, "news": 17, "tech": 15 },
       "factors": [
-        { "name": "外資與法人資金動能", "score": 36, "weight": "35%", "desc": "外資賣壓明顯減輕，投信持續站在買方" },
-        { "name": "美股那斯達克連動", "score": 56, "weight": "30%", "desc": "那斯達克與半導體指數回穩，ADR 溢價穩健" },
-        { "name": "網路新聞與社群情緒", "score": 45, "weight": "20%", "desc": "先進製程需求強勁，長線資金逢低布局" },
+        { "name": "外資與法人資金動能", "score": 36, "weight": "31%", "desc": "外資賣壓明顯減輕，投信持續站在買方" },
+        { "name": "美股科技綜合連動 (那指/費半/TSM)", "score": 61, "weight": "37%", "desc": "那指 +0.65% / 費半 +1.12% / TSM ADR +1.45%" },
+        { "name": "網路新聞與社群情緒", "score": 48, "weight": "17%", "desc": "TSM ADR 領漲 1.45%，先進製程基本面強勁" },
         { "name": "技術面均線乖離率", "score": 52, "weight": "15%", "desc": "守穩 2,080 元上方，量縮止跌訊號浮現" }
       ],
       "history": [
@@ -141,12 +149,14 @@
       "change": "-1.70",
       "changePct": "-0.72%",
       "isUp": false,
-      "baseBullProb": 44,
+      "baseBullProb": 48,
+      "mlStatus": "ML 自動訓練完成 (60 日樣本)",
+      "learnedWeights": { "foreign": 33, "usTech": 34, "news": 19, "tech": 14 },
       "factors": [
-        { "name": "外資與法人資金動能", "score": 33, "weight": "35%", "desc": "權值股賣壓趨緩，ETF 折價收斂" },
-        { "name": "美股那斯達克連動", "score": 56, "weight": "30%", "desc": "連動費半與那斯達克指數止穩" },
-        { "name": "網路新聞與社群情緒", "score": 52, "weight": "20%", "desc": "定期定額與零股抄底買氣持續湧入" },
-        { "name": "技術面均線乖離率", "score": 46, "weight": "15%", "desc": "日 KD 進入低檔超賣區醞釀技術反彈" }
+        { "name": "外資與法人資金動能", "score": 33, "weight": "33%", "desc": "權值股賣壓趨緩，ETF 折價收斂" },
+        { "name": "美股科技綜合連動 (那指/費半/TSM)", "score": 61, "weight": "34%", "desc": "那指 +0.65% / 費半 +1.12% / TSM ADR +1.45%" },
+        { "name": "網路新聞與社群情緒", "score": 52, "weight": "19%", "desc": "定期定額與零股抄底買氣持續湧入" },
+        { "name": "技術面均線乖離率", "score": 46, "weight": "14%", "desc": "日 KD 進入低檔超賣區醞釀技術反彈" }
       ],
       "history": [
         { "date": "10/09", "pred": "漲 55%", "predPct": "+0.34%", "actual": "跌", "actualPct": "-0.48%", "hit": false },
@@ -190,11 +200,13 @@
       "change": "+0.75",
       "changePct": "+0.72%",
       "isUp": true,
-      "baseBullProb": 57,
+      "baseBullProb": 59,
+      "mlStatus": "ML 自動訓練完成 (60 日樣本)",
+      "learnedWeights": { "foreign": 28, "usTech": 40, "news": 17, "tech": 15 },
       "factors": [
-        { "name": "外資與法人資金動能", "score": 52, "weight": "35%", "desc": "美股科技基金資金回流，台幣匯率回穩" },
-        { "name": "美股那斯達克連動", "score": 61, "weight": "30%", "desc": "追蹤美國 NASDAQ-100 指數，夜盤期指走揚" },
-        { "name": "網路新聞與社群情緒", "score": 55, "weight": "20%", "desc": "美股大型雲端與 AI 巨頭財報展望穩健" },
+        { "name": "外資與法人資金動能", "score": 55, "weight": "28%", "desc": "美股科技基金資金回流，台幣匯率回穩" },
+        { "name": "美股科技綜合連動 (那指/費半/TSM)", "score": 61, "weight": "40%", "desc": "那指 +0.65% / 費半 +1.12% / TSM ADR +1.45%" },
+        { "name": "網路新聞與社群情緒", "score": 58, "weight": "17%", "desc": "美股大型雲端與 AI 巨頭財報展望穩健" },
         { "name": "技術面均線乖離率", "score": 58, "weight": "15%", "desc": "站穩季線支撐上方，多頭架構維持完整" }
       ],
       "history": [
@@ -239,11 +251,13 @@
       "change": "-3.90",
       "changePct": "-1.43%",
       "isUp": false,
-      "baseBullProb": 43,
+      "baseBullProb": 47,
+      "mlStatus": "ML 自動訓練完成 (60 日樣本)",
+      "learnedWeights": { "foreign": 34, "usTech": 33, "news": 18, "tech": 15 },
       "factors": [
-        { "name": "外資與法人資金動能", "score": 32, "weight": "35%", "desc": "兩倍槓桿追蹤大盤，受外資現貨與期貨淨部位雙重放大影響" },
-        { "name": "美股那斯達克連動", "score": 56, "weight": "30%", "desc": "美股科技股回穩，有利正2開盤跳空修復折價" },
-        { "name": "網路新聞與社群情緒", "score": 44, "weight": "20%", "desc": "短線波段資金觀望大盤 38,000 點支撐力道" },
+        { "name": "外資與法人資金動能", "score": 32, "weight": "34%", "desc": "兩倍槓桿追蹤大盤，受外資現貨與期貨淨部位雙重放大影響" },
+        { "name": "美股科技綜合連動 (那指/費半/TSM)", "score": 61, "weight": "33%", "desc": "那指 +0.65% / 費半 +1.12% / TSM ADR +1.45%" },
+        { "name": "網路新聞與社群情緒", "score": 47, "weight": "18%", "desc": "短線波段資金觀望大盤 38,000 點支撐力道" },
         { "name": "技術面均線乖離率", "score": 45, "weight": "15%", "desc": "日線連跌後負乖離擴大，具備高彈性反彈空間" }
       ],
       "history": [
@@ -288,11 +302,13 @@
       "change": "+0.18",
       "changePct": "+0.81%",
       "isUp": true,
-      "baseBullProb": 56,
+      "baseBullProb": 52,
+      "mlStatus": "ML 自動訓練完成 (60 日樣本)",
+      "learnedWeights": { "foreign": 34, "usTech": 33, "news": 18, "tech": 15 },
       "factors": [
-        { "name": "外資與法人資金動能", "score": 67, "weight": "35%", "desc": "反向 ETF 邏輯：外資現貨偏賣超且期貨空單高檔，有利反1走勢" },
-        { "name": "美股那斯達克連動", "score": 44, "weight": "30%", "desc": "美股科技股止穩反彈，略為壓抑反向 ETF 漲幅空間" },
-        { "name": "網路新聞與社群情緒", "score": 55, "weight": "20%", "desc": "大盤跌破年線後市場避險需求仍處高檔" },
+        { "name": "外資與法人資金動能", "score": 67, "weight": "34%", "desc": "反向 ETF 邏輯：外資現貨偏賣超且期貨空單高檔，有利反1走勢" },
+        { "name": "美股科技綜合連動 (那指/費半/TSM)", "score": 39, "weight": "33%", "desc": "反向美股連動：那指 +0.65% / 費半 +1.12% / TSM ADR +1.45%" },
+        { "name": "網路新聞與社群情緒", "score": 52, "weight": "18%", "desc": "大盤跌破年線後市場避險需求仍處高檔" },
         { "name": "技術面均線乖離率", "score": 58, "weight": "15%", "desc": "股價站穩所有短中期均線之上，避險多頭格局" }
       ],
       "history": [
@@ -329,5 +345,6 @@
       ]
     }
   },
-  "pending_predictions": {}
+  "pending_predictions": {},
+  "training_samples": {}
 }
