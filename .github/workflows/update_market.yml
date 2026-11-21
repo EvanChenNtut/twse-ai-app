@@ -1,0 +1,38 @@
+name: Auto Update TWSE AI Market Data
+
+on:
+  schedule:
+    # 台灣時間週一至週五 14:30 (UTC 06:30) 自動執行收盤抓取與結算
+    - cron: '30 6 * * 1-5'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          pip install requests yfinance feedparser pytz
+
+      - name: Run market crawler & backtest settler
+        run: |
+          python scripts/fetch_and_predict.py
+
+      - name: Commit and push updated market_data.json
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add market_data.json
+          git diff --quiet && git diff --staged --quiet || git commit -m "chore: auto update TWSE market data & 30-day backtest"
+          git push

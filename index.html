@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html lang="zh-TW" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+  <title>台股 AI 明日漲跌情報站</title>
+  
+  <!-- PWA & Mobile App Meta Tags -->
+  <link rel="manifest" href="./manifest.json" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./icons/icon-32.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="./icons/icon-192.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="./icons/apple-touch-icon.png" />
+  <meta name="theme-color" content="#090d16" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="台股AI預測" />
+
+  <!-- Tailwind CSS & React via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <style>
+    body {
+      background-color: #090d16;
+      color: #f1f5f9;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans TC", sans-serif;
+      -webkit-tap-highlight-color: transparent;
+      padding-top: env(safe-area-inset-top);
+      padding-bottom: env(safe-area-inset-bottom);
+    }
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+
+  <script type="text/babel">
+    const { useState, useEffect, useMemo } = React;
+
+    const WEEKDAYS_ZH = ['週日', '週一', '週二', '週三', '週四', '週五', '週六'];
+    const WEEKDAYS_SHORT = ['日', '一', '二', '三', '四', '五', '六'];
+    const ORDERED_CODES = ['TAIEX', '2330', '0050', '00662', '00631L', '00632R'];
+
+    function formatFullDateZh(d) {
+      const y = d.getFullYear();
+      const m = String(d.getMonth() + 1).padStart(2, '0');
+      const day = String(d.getDate()).padStart(2, '0');
+      return `${y}/${m}/${day} (${WEEKDAYS_ZH[d.getDay()]})`;
+    }
+
+    function formatShortDate(d) {
+      const m = String(d.getMonth() + 1).padStart(2, '0');
+      const day = String(d.getDate()).padStart(2, '0');
+      return `${m}/${day}`;
+    }
+
+    function isAfterMarketClose(now = new Date()) {
+      const mins = now.getHours() * 60 + now.getMinutes();
+      return mins >= (13 * 60 + 30);
+    }
+
+    function getTargetTradingDate(now = new Date()) {
+      const target = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+      const dow = target.getDay();
+      const closed = isAfterMarketClose(now);
+
+      if (dow === 6) {
+        target.setDate(target.getDate() + 2);
+      } else if (dow === 0) {
+        target.setDate(target.getDate() + 1);
+      } else if (dow === 5) {
+        if (closed) target.setDate(target.getDate() + 3);
+      } else {
+        if (closed) target.setDate(target.getDate() + 1);
+      }
+      return target;
+    }
+
+    function calcExpectedMovePct(bullProb, annualVol) {
+      const dailyVolPct = (annualVol / Math.sqrt(252)) * 100;
+      const bias = (bullProb - 50) / 50;
+      const expected = bias * dailyVolPct * 1.15;
+      return Number(expected.toFixed(2));
+    }
+
+    function formatSignedPct(val) {
+      const num = Number(val);
+      return `${num >= 0 ? '+' : ''}${num.toFixed(2)}%`;
+    }
+
+    function analyzeHeadlineSentiment(title) {
+      const bullWords = ['大漲', '飆升', '創高', '利多', '買超', '優於預期', '護盤', '反彈', '回升', '成長', '突破', '強勢', '訂單', '止穩', '縮小'];
+      const bearWords = ['大跌', '重挫', '跌停', '利空', '賣超', '貶破', '恐慌', '破底', '下探', '裁員', '衰退', '拖累', '暴跌'];
+      let score = 0;
+      bullWords.forEach(w => { if (title.includes(w)) score += 4; });
+      bearWords.forEach(w => { if (title.includes(w)) score -= 4; });
+      if (score > 0) return { sentiment: 'bull', impact: Math.min(score, 10) };
+      if (score < 0) return { sentiment: 'bear', impact: Math.max(score, -10) };
+      return { sentiment: 'neutral', impact: 0 };
+    }
+
+    // ===== 未來一個月股價位置預測 =====
+    const UP_COLOR = '#f43f5e';
+    const DOWN_COLOR = '#10b981';
+
+    const parsePrice = (str) => parseFloat(String(str).replace(/,/g, ''));
+    const fmtPrice = (v) => v.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+    const fmtPct = (v) => `${v >= 0 ? '+' : ''}${v.toFixed(2)}%`;
+    const fmtMD = (d) => `${String(d.getMonth() + 1).padStart(2, '0')}/${String(d.getDate()).padStart(2, '0')}`;
+
+    function normCdf(x) {
+      const t = 1 / (1 + 0.2316419 * Math.abs(x));
+      const d = 0.3989423 * Math.exp(-x * x / 2);
+      const p = d * t * (0.3193815 + t * (-0.3565638 + t * (1.781478 + t * (-1.821256 + t * 1.330274))));
+      return x > 0 ? 1 - p : p;
+    }
+
+    function getTradingDays(baseDate) {
+      const end = new Date(baseDate);
+      end.setMonth(end.getMonth() + 1);
+      const days = [];
+      const cur = new Date(baseDate);
+      while (true) {
+        cur.setDate(cur.getDate() + 1);
+        if (cur > end) break;
+        const wd = cur.getDay();
+        if (wd !== 0 && wd !== 6) days.push(new Date(cur));
+      }
+      return days;
+    }
+
+    function buildForecast(stock, bullProb, baseDate) {
+      const p0 = parsePrice(stock.price);
+      const sigmaD = stock.annualVol / Math.sqrt(252);
+      const composite = stock.factors.reduce((acc, f) => acc + f.score * (parseFloat(f.weight) / 100), 0);
+      const shortBias = (bullProb - 50) / 50;
+      const midBias = (composite - 50) / 50;
+      const days = getTradingDays(baseDate);
+
+      const Z50 = 0.6745;
+      const Z80 = 1.2816;
+      let cumMu = 0;
+      const points = [{ i: 0, date: baseDate, median: p0, lo50: p0, hi50: p0, lo80: p0, hi80: p0, pct: 0 }];
+      days.forEach((date, idx) => {
+        const t = idx + 1;
+        cumMu += sigmaD * (0.35 * shortBias * Math.exp(-(t - 1) / 5) + 0.12 * midBias);
+        const s = sigmaD * Math.sqrt(t);
+        const median = p0 * Math.exp(cumMu);
+        points.push({
+          i: t,
+          date,
+          median,
+          lo50: p0 * Math.exp(cumMu - Z50 * s),
+          hi50: p0 * Math.exp(cumMu + Z50 * s),
+          lo80: p0 * Math.exp(cumMu - Z80 * s),
+          hi80: p0 * Math.exp(cumMu + Z80 * s),
+          pct: (median / p0 - 1) * 100,
+          upProb: normCdf(cumMu / s) * 100
+        });
+      });
+
+      const last = points[points.length - 1];
+      const milestoneIdx = [5, 10, 15, points.length - 1].filter((v, i, arr) => v < points.length && arr.indexOf(v) === i);
+      const milestones = milestoneIdx.map((idx, k) => ({
+        label: idx === points.length - 1 ? '一個月' : `第 ${k + 1} 週`,
+        ...points[idx]
+      }));
+
+      return {
+        p0,
+        points,
+        last,
+        milestones,
+        tradingDays: days.length,
+        isUp: last.median >= p0,
+        from: baseDate,
+        to: last.date
+      };
+    }
+
+    function niceTicks(min, max, count = 5) {
+      const span = max - min || 1;
+      const raw = span / count;
+      const mag = Math.pow(10, Math.floor(Math.log10(raw)));
+      const norm = raw / mag;
+      const step = (norm >= 5 ? 10 : norm >= 2 ? 5 : norm >= 1 ? 2 : 1) * mag;
+      const start = Math.ceil(min / step) * step;
+      const ticks = [];
+      for (let v = start; v <= max + 1e-9; v += step) ticks.push(v);
+      return ticks;
+    }
+
+    function ForecastChart({ forecast }) {
+      const [hoverIdx, setHoverIdx] = useState(null);
+      const { points, p0, isUp } = forecast;
+      const color = isUp ? UP_COLOR : DOWN_COLOR;
+
+      const W = 340, H = 220;
+      const pad = { top: 14, right: 14, bottom: 26, left: 50 };
+      const innerW = W - pad.left - pad.right;
+      const innerH = H - pad.top - pad.bottom;
+
+      const yMinRaw = Math.min(...points.map(p => p.lo80), p0);
+      const yMaxRaw = Math.max(...points.map(p => p.hi80), p0);
+      const padY = (yMaxRaw - yMinRaw) * 0.08;
+      const yMin = yMinRaw - padY;
+      const yMax = yMaxRaw + padY;
+      const n = points.length - 1;
+
+      const x = (i) => pad.left + (i / n) * innerW;
+      const y = (v) => pad.top + (1 - (v - yMin) / (yMax - yMin)) * innerH;
+
+      const band = (loKey, hiKey) =>
+        points.map((p, i) => `${i ? 'L' : 'M'}${x(p.i).toFixed(1)},${y(p[hiKey]).toFixed(1)}`).join(' ') + ' ' +
+        [...points].reverse().map(p => `L${x(p.i).toFixed(1)},${y(p[loKey]).toFixed(1)}`).join(' ') + ' Z';
+      const medianPath = points.map((p, i) => `${i ? 'L' : 'M'}${x(p.i).toFixed(1)},${y(p.median).toFixed(1)}`).join(' ');
+
+      const ticks = niceTicks(yMin, yMax, 4);
+      const xLabelIdx = [0, 5, 10, 15, n].filter((v, i, arr) => v <= n && arr.indexOf(v) === i && (v === n || n - v >= 3));
+
+      const handlePointer = (e) => {
+        const rect = e.currentTarget.getBoundingClientRect();
+        const vx = ((e.clientX - rect.left) / rect.width) * W;
+        const idx = Math.round(((vx - pad.left) / innerW) * n);
+        setHoverIdx(Math.max(0, Math.min(n, idx)));
+      };
+
+      const hp = hoverIdx !== null ? points[hoverIdx] : null;
+      const last = points[n];
+      const tipLeftPct = hp ? (x(hp.i) / W) * 100 : 0;
+
+      return (
+        <div className="relative select-none">
+          <svg
+            viewBox={`0 0 ${W} ${H}`}
+            className="w-full h-auto touch-none"
+            onPointerMove={handlePointer}
+            onPointerDown={handlePointer}
+            onPointerLeave={() => setHoverIdx(null)}
+            role="img"
+            aria-label={`未來一個月股價預測區間圖，一個月後中位預估 ${fmtPrice(last.median)}`}
+          >
+            {ticks.map(t => (
+              <g key={t}>
+                <line x1={pad.left} x2={W - pad.right} y1={y(t)} y2={y(t)} stroke="#1e293b" strokeWidth="1" />
+                <text x={pad.left - 6} y={y(t) + 3.5} textAnchor="end" fontSize="10" fill="#64748b">
+                  {t.toLocaleString('en-US', { maximumFractionDigits: t < 100 ? 1 : 0 })}
+                </text>
+              </g>
+            ))}
+
+            {xLabelIdx.map(i => (
+              <text key={i} x={x(i)} y={H - 8} textAnchor={i === 0 ? 'start' : i === n ? 'end' : 'middle'} fontSize="10" fill="#64748b">
+                {i === 0 ? '今日' : fmtMD(points[i].date)}
+              </text>
+            ))}
+
+            <path d={band('lo80', 'hi80')} fill={color} opacity="0.14" />
+            <path d={band('lo50', 'hi50')} fill={color} opacity="0.28" />
+            <line x1={pad.left} x2={W - pad.right} y1={y(p0)} y2={y(p0)} stroke="#94a3b8" strokeWidth="1" strokeDasharray="4 3" opacity="0.7" />
+            <path d={medianPath} fill="none" stroke={color} strokeWidth="2" strokeLinejoin="round" strokeLinecap="round" />
+
+            <circle cx={x(0)} cy={y(p0)} r="4" fill="#e2e8f0" stroke="#0f172a" strokeWidth="2" />
+            <circle cx={x(n)} cy={y(last.median)} r="4" fill={color} stroke="#0f172a" strokeWidth="2" />
+
+            {hp && (
+              <g>
+                <line x1={x(hp.i)} x2={x(hp.i)} y1={pad.top} y2={pad.top + innerH} stroke="#cbd5e1" strokeWidth="1" opacity="0.5" />
+                <circle cx={x(hp.i)} cy={y(hp.median)} r="4.5" fill={color} stroke="#0f172a" strokeWidth="2" />
+              </g>
+            )}
+          </svg>
+
+          {hp && (
+            <div
+              className="pointer-events-none absolute top-1 z-10 w-40 bg-slate-950/95 border border-slate-700 rounded-xl px-2.5 py-2 text-[11px] shadow-xl"
+              style={{
+                left: `${tipLeftPct}%`,
+                transform: `translateX(${tipLeftPct > 60 ? 'calc(-100% - 10px)' : '10px'})`
+              }}
+            >
+              <div className="text-slate-400">
+                {hp.i === 0 ? '今日基準' : `${fmtMD(hp.date)} (${WEEKDAYS_SHORT[hp.date.getDay()]})・第 ${hp.i} 個交易日`}
+              </div>
+              <div className="flex justify-between mt-1">
+                <span className="text-slate-400">中位預估</span>
+                <span className="font-bold text-white">{fmtPrice(hp.median)}</span>
+              </div>
+              {hp.i > 0 && (
+                <>
+                  <div className="flex justify-between">
+                    <span className="text-slate-400">預期漲跌</span>
+                    <span className="font-semibold text-slate-100">{fmtPct(hp.pct)}</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-slate-400">50% 區間</span>
+                    <span className="text-slate-200">{fmtPrice(hp.lo50)}～{fmtPrice(hp.hi50)}</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-slate-400">80% 區間</span>
+                    <span className="text-slate-200">{fmtPrice(hp.lo80)}～{fmtPrice(hp.hi80)}</span>
+                  </div>
+                </>
+              )}
+            </div>
+          )}
+        </div>
+      );
+    }
+
+    function App() {
+      const [marketData, setMarketData] = useState(null);
+      const [selectedCode, setSelectedCode] = useState('TAIEX');
+      const [activeTab, setActiveTab] = useState('dashboard');
+      const [newsList, setNewsList] = useState([]);
+      const [newsFilter, setNewsFilter] = useState('全部');
+      const [isSyncing, setIsSyncing] = useState(false);
+      const [lastSyncTime, setLastSyncTime] = useState('載入雲端數據中...');
+      const [customHeadlines, setCustomHeadlines] = useState([]);
+      const [inputHeadline, setInputHeadline] = useState('');
+      const [inputImpact, setInputImpact] = useState(8);
+      const [showInstallTip, setShowInstallTip] = useState(false);
+
+      const todayDate = useMemo(() => new Date(), []);
+      const targetPredDate = useMemo(() => getTargetTradingDate(todayDate), [todayDate]);
+
+      // 從 GitHub Actions 自動更新的 ./market_data.json 載入真實股價、籌碼與 30 日回測
+      const loadCloudMarketData = async () => {
+        setIsSyncing(true);
+        try {
+          const res = await fetch(`./market_data.json?t=${Date.now()}`);
+          if (!res.ok) throw new Error('Failed to load market_data.json');
+          const data = await res.json();
+          setMarketData(data);
+          if (data.news && data.news.length > 0) {
+            setNewsList(data.news);
+          }
+          setLastSyncTime(`雲端排程同步：${data.updatedAt || '剛剛'}`);
+        } catch (err) {
+          setLastSyncTime('離線快取模式');
+        } finally {
+          setTimeout(() => setIsSyncing(false), 400);
+        }
+      };
+
+      // 點擊「更新情報」時，除了重抓 market_data.json，也即時補抓最新 Google News RSS
+      const handleManualRefresh = async () => {
+        await loadCloudMarketData();
+        try {
+          const rssUrl = encodeURIComponent('https://news.google.com/rss/search?q=台股+OR+外資+OR+台積電+OR+那斯達克&hl=zh-TW&gl=TW&ceid=TW:zh-Hant');
+          const res = await fetch(`https://api.rss2json.com/v1/api.json?rss_url=${rssUrl}`);
+          const data = await res.json();
+          if (data.status === 'ok' && data.items && data.items.length > 0) {
+            const parsed = data.items.slice(0, 8).map((item, idx) => {
+              const cleanTitle = item.title.split(' - ')[0];
+              const sourceName = item.title.split(' - ')[1] || '即時財經';
+              const { sentiment, impact } = analyzeHeadlineSentiment(cleanTitle);
+              return {
+                id: 'live-' + idx + '-' + Date.now(),
+                source: sourceName,
+                category: '即時新聞',
+                time: item.pubDate ? item.pubDate.slice(11, 16) : '剛剛',
+                title: cleanTitle,
+                link: item.link,
+                sentiment,
+                impact
+              };
+            });
+            setNewsList(parsed);
+            const now = new Date();
+            setLastSyncTime(`${now.getHours().toString().padStart(2, '0')}:${now.getMinutes().toString().padStart(2, '0')} 已同步即時新聞與雲端數據`);
+          }
+        } catch (e) {}
+      };
+
+      useEffect(() => {
+        loadCloudMarketData();
+        const isStandalone = window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone;
+        if (!isStandalone) {
+          setShowInstallTip(true);
+        }
+      }, []);
+
+      const stocksMap = marketData?.stocks || {};
+      const availableCodes = ORDERED_CODES.filter(c => stocksMap[c]);
+      const currentStock = stocksMap[selectedCode] || stocksMap[availableCodes[0]];
+
+      // 動態計算明日看漲/看跌機率與預估漲跌幅度
+      const { bullProb, bearProb, predictedMovePct } = useMemo(() => {
+        if (!currentStock) return { bullProb: 50, bearProb: 50, predictedMovePct: 0 };
+        const isInverse = (currentStock.leverage || 1) < 0;
+        const newsDelta = newsList.reduce((acc, item) => {
+          const dirSign = isInverse ? -1 : 1;
+          return acc + (item.impact * 0.35 * dirSign);
+        }, 0);
+        const simDelta = customHeadlines.reduce((acc, item) => acc + item.impact, 0);
+        let rawBull = Math.round(currentStock.baseBullProb + newsDelta + simDelta);
+        rawBull = Math.max(5, Math.min(95, rawBull));
+        const movePct = calcExpectedMovePct(rawBull, currentStock.annualVol);
+        return {
+          bullProb: rawBull,
+          bearProb: 100 - rawBull,
+          predictedMovePct: movePct
+        };
+      }, [currentStock, newsList, customHeadlines]);
+
+      const backtest = useMemo(() => {
+        const list = (currentStock?.history || []).slice(-30);
+        const hits = list.filter(h => h.hit).length;
+        return {
+          list,
+          total: list.length,
+          hits,
+          rate: list.length ? ((hits / list.length) * 100).toFixed(1) : '0.0',
+          from: list.length ? list[0].date : '',
+          to: list.length ? list[list.length - 1].date : ''
+        };
+      }, [currentStock]);
+
+      const forecast = useMemo(() => {
+        if (!currentStock) return null;
+        return buildForecast(currentStock, bullProb, todayDate);
+      }, [currentStock, bullProb, todayDate]);
+
+      const addCustomEvent = (title, impact) => {
+        if (!title.trim()) return;
+        setCustomHeadlines(prev => [{ id: Date.now(), title, impact }, ...prev]);
+        setInputHeadline('');
+      };
+
+      const filteredNews = newsFilter === '全部'
+        ? newsList
+        : newsList.filter(n => (newsFilter === '利多' && n.sentiment === 'bull') || (newsFilter === '利空' && n.sentiment === 'bear'));
+
+      if (!currentStock) {
+        return (
+          <div className="min-h-screen bg-[#090d16] text-slate-200 flex items-center justify-center text-sm">
+            正在同步台股與美股即時資料庫...
+          </div>
+        );
+      }
+
+      const radius = 76;
+      const circumference = Math.PI * radius;
+      const bullStrokeOffset = circumference - (bullProb / 100) * circumference;
+
+      return (
+        <div className="min-h-screen max-w-md mx-auto bg-[#090d16] text-slate-100 flex flex-col pb-24">
+          
+          {/* Top App Header */}
+          <header className="sticky top-0 z-30 bg-[#090d16]/90 backdrop-blur-md border-b border-slate-800/80 px-4 py-3">
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-2.5">
+                <div className="w-8 h-8 rounded-xl bg-gradient-to-tr from-rose-500 via-amber-500 to-emerald-500 p-[1.5px]">
+                  <div className="w-full h-full bg-slate-950 rounded-[10px] flex items-center justify-center font-black text-xs text-white">
+                    AI
+                  </div>
+                </div>
+                <div>
+                  <h1 className="text-base font-bold tracking-tight text-white">台股 AI 明日漲跌情報站</h1>
+                  <p className="text-[11px] text-slate-400 flex items-center gap-1">
+                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                    {lastSyncTime}
+                  </p>
+                </div>
+              </div>
+              <button
+                onClick={handleManualRefresh}
+                disabled={isSyncing}
+                className="px-3 py-1.5 rounded-full bg-slate-800/90 hover:bg-slate-700 active:scale-95 transition text-xs font-medium text-slate-200 border border-slate-700/70 flex items-center gap-1.5"
+              >
+                <span className={isSyncing ? 'animate-spin inline-block' : ''}>↻</span>
+                {isSyncing ? '掃描中' : '更新情報'}
+              </button>
+            </div>
+
+            {/* 今日日期 & 預測目標交易日 雙欄狀態列 */}
+            <div className="mt-2.5 grid grid-cols-2 gap-2 bg-slate-900/90 border border-slate-800 rounded-xl px-3 py-2 text-[11px]">
+              <div className="flex flex-col">
+                <span className="text-slate-400">📅 今日日期</span>
+                <span className="font-bold text-slate-100 mt-0.5">{formatFullDateZh(todayDate)}</span>
+              </div>
+              <div className="flex flex-col border-l border-slate-800 pl-3">
+                <span className="text-indigo-300">🎯 預測目標交易日</span>
+                <span className="font-bold text-amber-300 mt-0.5">{formatFullDateZh(targetPredDate)}</span>
+              </div>
+            </div>
+
+            {showInstallTip && (
+              <div className="mt-2 bg-indigo-950/70 border border-indigo-500/30 rounded-xl px-3 py-1.5 flex items-center justify-between text-[11px]">
+                <span className="text-indigo-200">
+                  💡 點擊瀏覽器「分享 / 選單」→ <b>加入主畫面</b>，即可當獨立 App 使用！
+                </span>
+                <button onClick={() => setShowInstallTip(false)} className="text-indigo-400 ml-2 font-bold">✕</button>
+              </div>
+            )}
+
+            {/* 標的快速切換列 (加權指數、台積電 2330、0050、富邦NASDAQ 00662、0050正2 00631L、0050反1 00632R) */}
+            <div className="flex gap-2 overflow-x-auto no-scrollbar pt-2.5 pb-1">
+              {availableCodes.map((code) => {
+                const st = stocksMap[code];
+                const active = selectedCode === st.code;
+                return (
+                  <button
+                    key={st.code}
+                    onClick={() => setSelectedCode(st.code)}
+                    className={`shrink-0 px-3 py-1.5 rounded-xl text-xs font-semibold transition border ${
+                      active
+                        ? 'bg-slate-100 text-slate-900 border-white shadow-sm'
+                        : 'bg-slate-900/90 text-slate-400 border-slate-800 hover:text-slate-200'
+                    }`}
+                  >
+                    {st.name} <span className="opacity-70">{st.code}</span>
+                  </button>
+                );
+              })}
+            </div>
+          </header>
+
+          {/* Main Content Area */}
+          <main className="flex-1 px-4 pt-4 space-y-4">
+            
+            {/* 報價、明日機率與預測漲跌幅度核心卡片 */}
+            <section className="bg-slate-900/80 border border-slate-800/90 rounded-2xl p-4 shadow-xl">
+              <div className="flex items-baseline justify-between mb-3">
+                <div>
+                  <div className="flex items-center gap-1.5">
+                    <span className="text-xs text-slate-400 font-medium">{currentStock.code}</span>
+                    {currentStock.leverage === 2 && (
+                      <span className="text-[10px] px-1.5 py-0.2 rounded bg-rose-500/20 text-rose-300 border border-rose-500/30 font-bold">2X 槓桿</span>
+                    )}
+                    {currentStock.leverage === -1 && (
+                      <span className="text-[10px] px-1.5 py-0.2 rounded bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 font-bold">反向 -1X</span>
+                    )}
+                  </div>
+                  <h2 className="text-xl font-extrabold text-white">{currentStock.name}</h2>
+                </div>
+                <div className="text-right">
+                  <div className={`text-xl font-black tracking-tight ${currentStock.isUp ? 'text-rose-400' : 'text-emerald-400'}`}>
+                    {currentStock.price}
+                  </div>
+                  <div className={`text-xs font-semibold ${currentStock.isUp ? 'text-rose-400' : 'text-emerald-400'}`}>
+                    {currentStock.change} ({currentStock.changePct})
+                  </div>
+                </div>
+              </div>
+
+              {/* 半圓機率儀表板 */}
+              <div className="relative flex flex-col items-center justify-center pt-2 pb-1">
+                <svg className="w-48 h-28 overflow-visible" viewBox="0 0 180 100">
+                  <path
+                    d="M 14 90 A 76 76 0 0 1 166 90"
+                    fill="none"
+                    stroke="#10b981"
+                    strokeWidth="14"
+                    strokeLinecap="round"
+                    opacity="0.35"
+                  />
+                  <path
+                    d="M 14 90 A 76 76 0 0 1 166 90"
+                    fill="none"
+                    stroke="#f43f5e"
+                    strokeWidth="14"
+                    strokeLinecap="round"
+                    strokeDasharray={circumference}
+                    strokeDashoffset={bullStrokeOffset}
+                    style={{ transition: 'stroke-dashoffset 0.6s ease' }}
+                  />
+                </svg>
+
+                <div className="absolute bottom-1 text-center">
+                  <div className="text-[11px] tracking-wider text-slate-300 font-semibold">
+                    {formatShortDate(targetPredDate)} ({WEEKDAYS_SHORT[targetPredDate.getDay()]}) 開盤趨勢預測
+                  </div>
+                  <div className="text-2xl font-black mt-0.5">
+                    {bullProb >= 50 ? (
+                      <span className="text-rose-400">看漲 {bullProb}%</span>
+                    ) : (
+                      <span className="text-emerald-400">看跌 {bearProb}%</span>
+                    )}
+                  </div>
+                </div>
+              </div>
+
+              {/* 預測漲跌幅度指標橫幅 */}
+              <div className="mt-2.5 bg-slate-950/85 border border-slate-800 rounded-xl px-3.5 py-2.5 flex items-center justify-between">
+                <div className="flex flex-col">
+                  <span className="text-[11px] text-slate-400">AI 預估 {formatShortDate(targetPredDate)} 漲跌幅度</span>
+                  <span className="text-[10px] text-slate-500">依真實波動率與多空因子加權計算</span>
+                </div>
+                <div className={`text-lg font-black tracking-tight px-2.5 py-0.5 rounded-lg ${
+                  predictedMovePct >= 0
+                    ? 'bg-rose-500/15 text-rose-400 border border-rose-500/30'
+                    : 'bg-emerald-500/15 text-emerald-400 border border-emerald-500/30'
+                }`}>
+                  {formatSignedPct(predictedMovePct)}
+                </div>
+              </div>
+
+              {/* 紅綠機率對比條 */}
+              <div className="mt-3 space-y-1.5">
+                <div className="flex justify-between text-xs font-bold">
+                  <span className="text-rose-400">▲ {formatShortDate(targetPredDate)} 上漲機率 {bullProb}%</span>
+                  <span className="text-emerald-400">下跌機率 {bearProb}% ▼</span>
+                </div>
+                <div className="w-full h-2.5 bg-emerald-500/30 rounded-full overflow-hidden flex">
+                  <div
+                    className="bg-rose-500 h-full transition-all duration-500"
+                    style={{ width: `${bullProb}%` }}
+                  />
+                  <div
+                    className="bg-emerald-500 h-full transition-all duration-500"
+                    style={{ width: `${bearProb}%` }}
+                  />
+                </div>
+              </div>
+            </section>
+
+            {/* Tab 1: AI 因子權重與完整近 30 個交易日回測 */}
+            {activeTab === 'dashboard' && (
+              <>
+                <section className="bg-slate-900/70 border border-slate-800/80 rounded-2xl p-4 space-y-3">
+                  <div className="flex items-center justify-between">
+                    <h3 className="text-sm font-bold text-slate-200">AI 多維度評估因子</h3>
+                    <span className="text-[11px] text-slate-400">滿分 100 偏多</span>
+                  </div>
+                  <div className="space-y-3">
+                    {currentStock.factors.map((f, idx) => (
+                      <div key={idx} className="space-y-1">
+                        <div className="flex justify-between text-xs">
+                          <span className="font-semibold text-slate-200">
+                            {f.name} <span className="text-slate-500 font-normal">({f.weight})</span>
+                          </span>
+                          <span className={`font-bold ${f.score >= 50 ? 'text-rose-400' : 'text-emerald-400'}`}>
+                            {f.score} 分
+                          </span>
+                        </div>
+                        <div className="w-full h-1.5 bg-slate-800 rounded-full overflow-hidden">
+                          <div
+                            className={`h-full rounded-full ${f.score >= 50 ? 'bg-rose-500' : 'bg-emerald-500'}`}
+                            style={{ width: `${f.score}%` }}
+                          />
+                        </div>
+                        <p className="text-[11px] text-slate-400">{f.desc}</p>
+                      </div>
+                    ))}
+                  </div>
+                </section>
+
+                {/* 近 30 個交易日回測 */}
+                <section className="bg-slate-900/70 border border-slate-800/80 rounded-2xl p-4 space-y-3">
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-1.5">
+                      <h3 className="text-sm font-bold text-slate-200">近 30 個交易日回測</h3>
+                      <span className="text-[10px] px-1.5 py-0.5 rounded bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">
+                        雲端收盤自動結算
+                      </span>
+                    </div>
+                    <span className="text-xs font-bold text-amber-400">勝率 {backtest.rate}%</span>
+                  </div>
+
+                  <div className="flex items-center justify-between text-[11px] text-slate-400">
+                    <span>
+                      {backtest.from} ~ {backtest.to}・共 {backtest.total} 個交易日
+                    </span>
+                    <span>
+                      命中 <span className="text-rose-400 font-semibold">{backtest.hits}</span>
+                      {' / '}失誤 <span className="text-emerald-400 font-semibold">{backtest.total - backtest.hits}</span>
+                    </span>
+                  </div>
+
+                  {/* 30 日連續命中走勢條 */}
+                  <div className="flex gap-0.5" aria-label="近30日每日命中走勢">
+                    {backtest.list.map((h, i) => (
+                      <div
+                        key={i}
+                        title={`${h.date} 預測${h.pred}(${h.predPct}) / 實際${h.actual}(${h.actualPct})`}
+                        className={`flex-1 h-2 rounded-sm ${h.hit ? 'bg-amber-400/85' : 'bg-slate-700'}`}
+                      />
+                    ))}
+                  </div>
+
+                  {/* 自動結算鎖定狀態列 */}
+                  <div className="bg-slate-950/90 border border-slate-800/90 rounded-xl px-3 py-2 flex items-center justify-between text-[11px]">
+                    <span className="text-slate-300">
+                      🤖 已鎖定 <b className="text-amber-300">{formatShortDate(targetPredDate)}</b> 預測：
+                      <b className={bullProb >= 50 ? 'text-rose-400' : 'text-emerald-400'}>
+                        {bullProb >= 50 ? `漲 ${bullProb}%` : `跌 ${bearProb}%`} ({formatSignedPct(predictedMovePct)})
+                      </b>
+                    </span>
+                  </div>
+
+                  {/* 30 筆回測卡片網格 */}
+                  <div className="grid grid-cols-3 gap-2 max-h-96 overflow-y-auto no-scrollbar pt-1">
+                    {[...backtest.list].reverse().map((h) => (
+                      <div
+                        key={h.date}
+                        className={`bg-slate-950/80 border rounded-xl px-2 py-2.5 text-center space-y-1 ${
+                          h.autoLogged ? 'border-indigo-500/40' : 'border-slate-800/80'
+                        }`}
+                      >
+                        <div className="flex items-center justify-between text-[10px] text-slate-400 border-b border-slate-800/80 pb-1">
+                          <span className="font-semibold text-slate-300">{h.date}</span>
+                          <span>{h.hit ? '✅' : '❌'}</span>
+                        </div>
+                        <div className="pt-0.5">
+                          <div className="text-[10px] text-slate-500">AI 預測</div>
+                          <div className={`text-xs font-extrabold ${h.pred.includes('漲') ? 'text-rose-400' : 'text-emerald-400'}`}>
+                            {h.pred}
+                          </div>
+                          <div className={`text-[11px] font-bold ${h.predPct && h.predPct.startsWith('+') ? 'text-rose-300/90' : 'text-emerald-300/90'}`}>
+                            預估 {h.predPct || '--'}
+                          </div>
+                        </div>
+                        <div className="pt-1 border-t border-slate-800/60">
+                          <div className="text-[10px] text-slate-500">實際收盤</div>
+                          <div className={`text-[11px] font-bold ${h.actual === '漲' ? 'text-rose-400' : 'text-emerald-400'}`}>
+                            {h.actual} {h.actualPct ? `(${h.actualPct})` : ''}
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </section>
+              </>
+            )}
+
+            {/* Tab 2: 即時網路情報流 */}
+            {activeTab === 'news' && (
+              <section className="space-y-3">
+                <div className="flex items-center justify-between">
+                  <h3 className="text-sm font-bold text-slate-200">即時網路與財經情報流</h3>
+                  <div className="flex gap-1.5">
+                    {['全部', '利多', '利空'].map(tag => (
+                      <button
+                        key={tag}
+                        onClick={() => setNewsFilter(tag)}
+                        className={`px-2.5 py-1 rounded-lg text-xs font-medium ${
+                          newsFilter === tag ? 'bg-indigo-600 text-white' : 'bg-slate-800 text-slate-400'
+                        }`}
+                      >
+                        {tag}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="space-y-2.5">
+                  {filteredNews.map(item => (
+                    <div key={item.id} className="bg-slate-900/80 border border-slate-800 rounded-2xl p-3.5 space-y-2">
+                      <div className="flex items-center justify-between text-[11px]">
+                        <span className="px-2 py-0.5 rounded-md bg-slate-800 text-slate-300 font-medium">
+                          {item.source} · {item.time}
+                        </span>
+                        <span className={`font-bold px-2 py-0.5 rounded-md ${
+                          item.sentiment === 'bull'
+                            ? 'bg-rose-500/15 text-rose-400'
+                            : item.sentiment === 'bear'
+                            ? 'bg-emerald-500/15 text-emerald-400'
+                            : 'bg-slate-700/40 text-slate-300'
+                        }`}>
+                          {item.sentiment === 'bull' ? `利多 +${item.impact}%` : item.sentiment === 'bear' ? `利空 ${item.impact}%` : '中性觀望'}
+                        </span>
+                      </div>
+                      <p className="text-xs font-medium text-slate-100 leading-relaxed">
+                        {item.title}
+                      </p>
+                      {item.link && (
+                        <a href={item.link} target="_blank" rel="noreferrer" className="inline-block text-[11px] text-indigo-400 hover:underline">
+                          查看原始新聞來源 →
+                        </a>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              </section>
+            )}
+
+            {/* Tab 3: 突發消息壓力測試模擬器 */}
+            {activeTab === 'simulator' && (
+              <section className="bg-slate-900/80 border border-slate-800 rounded-2xl p-4 space-y-4">
+                <div>
+                  <h3 className="text-sm font-bold text-white">突發情報壓力測試</h3>
+                  <p className="text-xs text-slate-400 mt-0.5">模擬盤後突發重大消息，觀察 {formatShortDate(targetPredDate)} 機率與漲跌幅變化</p>
+                </div>
+
+                <div className="grid grid-cols-2 gap-2">
+                  <button
+                    onClick={() => addCustomEvent('那斯達克指數強彈大漲 3%', +16)}
+                    className="p-2.5 rounded-xl bg-rose-950/40 border border-rose-500/30 text-left hover:bg-rose-950/60 transition"
+                  >
+                    <div className="text-xs font-bold text-rose-400">+16% 美股利多</div>
+                    <div className="text-[11px] text-slate-300 mt-0.5">那斯達克強彈 3%</div>
+                  </button>
+                  <button
+                    onClick={() => addCustomEvent('外資現貨大幅買超 300 億', +15)}
+                    className="p-2.5 rounded-xl bg-rose-950/40 border border-rose-500/30 text-left hover:bg-rose-950/60 transition"
+                  >
+                    <div className="text-xs font-bold text-rose-400">+15% 籌碼利多</div>
+                    <div className="text-[11px] text-slate-300 mt-0.5">外資大買 300 億</div>
+                  </button>
+                  <button
+                    onClick={() => addCustomEvent('外資期貨空單暴增至 5 萬口', -15)}
+                    className="p-2.5 rounded-xl bg-emerald-950/40 border border-emerald-500/30 text-left hover:bg-emerald-950/60 transition"
+                  >
+                    <div className="text-xs font-bold text-emerald-400">-15% 籌碼利空</div>
+                    <div className="text-[11px] text-slate-300 mt-0.5">外資空單創高</div>
+                  </button>
+                  <button
+                    onClick={() => addCustomEvent('美股科技股重挫費半跌 4%', -16)}
+                    className="p-2.5 rounded-xl bg-emerald-950/40 border border-emerald-500/30 text-left hover:bg-emerald-950/60 transition"
+                  >
+                    <div className="text-xs font-bold text-emerald-400">-16% 國際利空</div>
+                    <div className="text-[11px] text-slate-300 mt-0.5">美股費半重挫 4%</div>
+                  </button>
+                </div>
+
+                <div className="space-y-2 pt-2 border-t border-slate-800">
+                  <input
+                    type="text"
+                    value={inputHeadline}
+                    onChange={(e) => setInputHeadline(e.target.value)}
+                    placeholder="輸入自訂消息（例：聯準會宣布降息一碼）"
+                    className="w-full px-3 py-2 rounded-xl bg-slate-950 border border-slate-700 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-indigo-500"
+                  />
+                  <div className="flex items-center justify-between gap-3">
+                    <span className="text-xs text-slate-300 shrink-0">
+                      影響權重：<b className={inputImpact >= 0 ? 'text-rose-400' : 'text-emerald-400'}>{inputImpact > 0 ? `+${inputImpact}%` : `${inputImpact}%`}</b>
+                    </span>
+                    <input
+                      type="range"
+                      min="-25"
+                      max="25"
+                      value={inputImpact}
+                      onChange={(e) => setInputImpact(Number(e.target.value))}
+                      className="w-full accent-indigo-500"
+                    />
+                    <button
+                      onClick={() => addCustomEvent(inputHeadline, inputImpact)}
+                      className="shrink-0 px-3 py-1.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-xs font-bold text-white"
+                    >
+                      加入計算
+                    </button>
+                  </div>
+                </div>
+
+                {customHeadlines.length > 0 && (
+                  <div className="space-y-1.5 pt-2">
+                    <div className="flex justify-between items-center text-xs text-slate-400">
+                      <span>已套用模擬情境 ({customHeadlines.length})</span>
+                      <button onClick={() => setCustomHeadlines([])} className="text-rose-400 hover:underline">全部清除</button>
+                    </div>
+                    {customHeadlines.map(ev => (
+                      <div key={ev.id} className="flex items-center justify-between bg-slate-950 px-3 py-2 rounded-xl text-xs border border-slate-800">
+                        <span className="truncate pr-2">{ev.title}</span>
+                        <span className={`font-bold shrink-0 ${ev.impact >= 0 ? 'text-rose-400' : 'text-emerald-400'}`}>
+                          {ev.impact > 0 ? `+${ev.impact}%` : `${ev.impact}%`}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </section>
+            )}
+
+            {/* Tab 4: 未來一個月股價位置預測 */}
+            {activeTab === 'forecast' && forecast && (
+              <section className="bg-slate-900/80 border border-slate-800 rounded-2xl p-4 space-y-3">
+                <div className="flex items-center justify-between">
+                  <h3 className="text-sm font-bold text-white">未來一個月股價位置預測</h3>
+                  <span className="text-[11px] text-slate-400">{fmtMD(forecast.from)} ~ {fmtMD(forecast.to)}・{forecast.tradingDays} 個交易日</span>
+                </div>
+                <div className="text-xs text-slate-300">
+                  一個月後中位預估 <b className={forecast.isUp ? 'text-rose-400' : 'text-emerald-400'}>{fmtPrice(forecast.last.median)}</b>（{fmtPct(forecast.last.pct)}），上漲機率約 {forecast.last.upProb.toFixed(0)}%
+                </div>
+                <ForecastChart forecast={forecast} />
+                <div className="text-[10px] text-slate-500">實線為中位預估，深色帶為 50% 區間、淺色帶為 80% 區間，虛線為現價。</div>
+                <table className="w-full text-[11px]">
+                  <thead><tr className="text-slate-400"><th className="text-left py-1">時點</th><th className="text-right">中位預估</th><th className="text-right">漲跌</th><th className="text-right">80% 區間</th></tr></thead>
+                  <tbody>
+                    {forecast.milestones.map(m => (
+                      <tr key={m.i} className="border-t border-slate-800">
+                        <td className="py-1.5 text-slate-300">{m.label} <span className="text-slate-500">{fmtMD(m.date)}</span></td>
+                        <td className="text-right font-semibold text-white">{fmtPrice(m.median)}</td>
+                        <td className="text-right text-slate-200">{fmtPct(m.pct)}</td>
+                        <td className="text-right text-slate-300">{fmtPrice(m.lo80)}～{fmtPrice(m.hi80)}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </section>
+            )}
+
+            <p className="text-[10px] text-center text-slate-500 pb-4">
+              ※ 本工具為情報整合與機率模擬介面，非投資建議，交易請審慎評估風險。
+            </p>
+          </main>
+
+          {/* Bottom Mobile Navigation Bar */}
+          <nav className="fixed bottom-0 left-0 right-0 max-w-md mx-auto bg-[#0c1220]/95 backdrop-blur-md border-t border-slate-800/90 px-6 py-2.5 flex justify-around items-center z-40">
+            <button
+              onClick={() => setActiveTab('dashboard')}
+              className={`flex flex-col items-center gap-0.5 text-xs font-semibold ${activeTab === 'dashboard' ? 'text-white' : 'text-slate-500'}`}
+            >
+              <span className="text-base">📊</span>
+              <span>AI 總覽</span>
+            </button>
+            <button
+              onClick={() => setActiveTab('news')}
+              className={`flex flex-col items-center gap-0.5 text-xs font-semibold ${activeTab === 'news' ? 'text-white' : 'text-slate-500'}`}
+            >
+              <span className="text-base">📰</span>
+              <span>即時情報</span>
+            </button>
+            <button
+              onClick={() => setActiveTab('simulator')}
+              className={`flex flex-col items-center gap-0.5 text-xs font-semibold ${activeTab === 'simulator' ? 'text-white' : 'text-slate-500'}`}
+            >
+              <span className="text-base">⚡</span>
+              <span>情境模擬</span>
+            </button>
+            <button
+              onClick={() => setActiveTab('forecast')}
+              className={`flex flex-col items-center gap-0.5 text-xs font-semibold ${activeTab === 'forecast' ? 'text-white' : 'text-slate-500'}`}
+            >
+              <span className="text-base">🔮</span>
+              <span>未來預測</span>
+            </button>
+          </nav>
+        </div>
+      );
+    }
+
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(<App />);
+
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./sw.js').catch(() => {});
+      });
+    }
+  </script>
+</body>
+</html>
